@@ -17,3 +17,11 @@
       }
   }
 </script>
+
+<style scoped>
+#app {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+}
+</style>

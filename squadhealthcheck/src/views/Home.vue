@@ -8,6 +8,7 @@
         <button id="btnCode"><i class="fa fa-arrow-right"></i></button>
       </form>
       <h3><span>OR</span></h3>
+      <button id="btnCreate">CREATE</button>
     </div>
   </div>
 </template>
@@ -16,7 +17,8 @@
   .home {
     margin-right: 1em;
     margin-left: 1em;
-    margin-top: 3em;
+    margin-top: 4em;
+        flex: 1 0 auto;
   }
 
   .home div{
@@ -48,6 +50,21 @@
     text-indent: 1em;
     font-size: 1.5em;
     color: black;
+  }
+
+  #btnCreate {
+    background-color: #FFA200;
+    height: 60px;
+    width: 300px;
+    border-radius: 4px;
+    border:none;
+    outline:none;
+    -moz-box-shadow:    1px 1px 3px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 3px 3px #ccc;
+    box-shadow:         1px 1px 3px 3px #ccc;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
   }
 
   #btnCode {
