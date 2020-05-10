@@ -7,6 +7,7 @@
         <div id="shc-title">
             <section>
                 <h1>Squad Health Check</h1>
+                <br />
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -15,6 +16,7 @@
                 <p>
                     Increased awareness of where the squad is at, it’s state, challenges and opportunities.
                 </p>
+                <img src="./../assets/logo.png" alt="logo.png">
             </section>
         </div>
     </div>
@@ -24,14 +26,13 @@
     #shc-header{
         color: white;
         text-align: center;
-        overflow: hidden;
+        background-color: #FFA200;
     }
     #nav{
         text-align: right;
         font-size: 1em;
         letter-spacing: 1px;
         padding: 1em;
-        background-color: #FFA200;
     }
     #nav a{
         color:white;
@@ -45,13 +46,21 @@
     }
 
     #shc-title {
-        height: 20vh;
-        background-color: #FFA200;
+            height: 13em;
     }
 
     #shc-title h1{
         margin-block-start: 0;
         margin-block-end: 0;
-        font-size: 3em;
+        font-size: 2.5em;
+    }
+    #shc-title img{
+        width: 8em;
+    }
+
+    p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin: 0 5em 0 5em;
     }
 </style>
