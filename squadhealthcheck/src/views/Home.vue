@@ -44,9 +44,9 @@
     border-radius: 4px;
     border:none;
     outline:none;
-    -moz-box-shadow:    1px 1px 3px 3px #ccc;
-    -webkit-box-shadow: 1px 1px 3px 3px #ccc;
-    box-shadow:         1px 1px 3px 3px #ccc;
+    -moz-box-shadow:    1px 1px 1px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow:         1px 1px 1px 1px #ccc;
     text-indent: 1em;
     font-size: 1.5em;
     color: black;
