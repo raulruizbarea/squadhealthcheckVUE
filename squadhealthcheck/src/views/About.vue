@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    About
+    <h1>About</h1>
+    <div>
+    </div>
   </div>
 </template>
 <style scoped>
