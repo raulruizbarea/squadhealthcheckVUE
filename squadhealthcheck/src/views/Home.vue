@@ -7,7 +7,7 @@
         <input type="number" v-model="code" placeholder="Enter code" onKeyPress="if(this.value.length==4) return false;">
         <button id="btnCode"><i class="fa fa-arrow-right"></i></button>
       </form>
-      <h3><span>OR</span></h3>
+      <h3>OR</h3>
       <router-link to="/create"><button id="btnCreate">CREATE</button></router-link>
     </div>
   </div>
@@ -79,28 +79,5 @@
     height:40px;
     width:40px;
     border-radius:100%;
-  }
-
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    opacity: 1; /* Firefox */
-  }
-
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: black;
-  }
-
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
-  }
-
-  h3 {
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-  } 
-
-  h3 span { 
-      background:#fff; 
-      padding:0 10px; 
   }
 </style>

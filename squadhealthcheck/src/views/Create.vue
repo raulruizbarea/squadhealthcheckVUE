@@ -1,7 +1,7 @@
 <template>
   <div class="create">
     Create
-    <form-wizard>
+    <form-wizard title="" subtitle="">
       <tab-content>
         My first tab content
       </tab-content>
@@ -14,6 +14,7 @@
     </form-wizard>
   </div>
 </template>
+
 <style scoped>
   .create {
     flex: 1 0 auto;
@@ -21,5 +22,14 @@
 </style>
 
 <script>
-
+  import {FormWizard, TabContent} from 'vue-form-wizard';
+  import 'vue-form-wizard/dist/vue-form-wizard.min.css';
+  
+  export default {
+  //component code
+  components: {
+    FormWizard,
+    TabContent
+  }
+}
 </script>

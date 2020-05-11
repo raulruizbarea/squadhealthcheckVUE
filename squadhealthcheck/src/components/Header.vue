@@ -17,7 +17,6 @@
                 <p>
                     Increased awareness of where the squad is at, it’s state, challenges and opportunities.
                 </p>
-                <img src="./../assets/logo.png" alt="logo.png">
             </section>
         </div>
     </div>
