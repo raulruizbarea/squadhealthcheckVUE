@@ -1,9 +1,6 @@
 <template>
     <div id="shc-footer">
-        <p>
-        By using this application, you agree to our 
-        <b>Terms of Service</b> and <b>Privacy Policy</b>
-        </p>
+        <p>By using this application, you agree to our <b>Terms of Service</b> and <b>Privacy Policy</b></p>
     </div>
 </template>
 
