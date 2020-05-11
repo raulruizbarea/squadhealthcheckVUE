@@ -1,10 +1,5 @@
 <template>
     <div id="shc-header">
-        <div id="nav">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/create">Create</router-link>
-        </div>
         <div id="shc-title">
             <section>
                 <h1>Squad Health Check</h1>
@@ -17,7 +12,9 @@
                 <p>
                     Increased awareness of where the squad is at, it’s state, challenges and opportunities.
                 </p>
+                
             </section>
+            <router-link to="/"><img src="../assets/logo.png" /></router-link>
         </div>
     </div>
 </template>
@@ -28,39 +25,19 @@
         text-align: center;
         background-color: #FFA200;
     }
-    #nav{
-        text-align: right;
-        font-size: 1em;
-        letter-spacing: 1px;
-        padding: 1em;
-    }
-    #nav a{
-        color:white;
-        margin: 1em;
-    }
-    #nav a:link, a:visited, a:active{
-        text-decoration: none;
-    }
-    #nav a:hover {
-        text-decoration: underline;
+
+    section {
+        height: 14em;
     }
 
-    #shc-title {
-            height: 13em;
-    }
-
-    #shc-title h1{
-        margin-block-start: 0;
-        margin-block-end: 0;
-        font-size: 2.5em;
-    }
-    #shc-title img{
+    img {
         width: 8em;
-    }
-
-    p {
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin: 0 5em 0 5em;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 10em;
     }
 </style>
