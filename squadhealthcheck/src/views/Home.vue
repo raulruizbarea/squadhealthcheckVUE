@@ -8,7 +8,7 @@
         <button id="btnCode"><i class="fa fa-arrow-right"></i></button>
       </form>
       <h3><span>OR</span></h3>
-      <button id="btnCreate">CREATE</button>
+      <router-link to="/create"><button id="btnCreate">CREATE</button></router-link>
     </div>
   </div>
 </template>

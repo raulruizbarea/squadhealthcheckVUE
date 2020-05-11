@@ -1,7 +1,7 @@
 <template>
   <div class="create">
     Create
-    <form-wizard :start-index="1">
+    <form-wizard>
       <tab-content>
         My first tab content
       </tab-content>
