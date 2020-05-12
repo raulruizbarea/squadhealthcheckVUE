@@ -1,27 +1,24 @@
 <template>
-  <div id="app">
+  <v-app>
     <shc-header />
-    <router-view/>
+    
+    <v-content> 
+      <router-view/>
+    </v-content>
+    
     <shc-footer />
-  </div>
+  </v-app>
 </template>
 
 <script>
-  import Header from "./components/Header";
-  import Footer from "./components/Footer";
-  
-  export default {
-      components:{
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+export default {
+  name: 'App',
+  components:{
         'shc-header': Header,
         'shc-footer': Footer,
-      }
-  }
+  },
+};
 </script>
-
-<style scoped>
-  #app {
-    display: flex !important;
-    flex-direction: column;
-    height: 100%;
-  }
-</style>
