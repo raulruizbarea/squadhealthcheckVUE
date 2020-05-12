@@ -1,11 +1,9 @@
 <template>
   <v-app>
     <shc-header />
-    
     <v-content> 
       <router-view/>
     </v-content>
-    
     <shc-footer />
   </v-app>
 </template>

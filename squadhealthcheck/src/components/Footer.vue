@@ -1,5 +1,5 @@
 <template>
-    <v-footer absolute padless>
+    <v-footer absolute padless app>
         <v-col class="caption text-center text--secondary text--line-height-s" v-html="terms">
         </v-col>
     </v-footer>
