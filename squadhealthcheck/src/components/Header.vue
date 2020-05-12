@@ -1,47 +1,16 @@
 <template>
-    <div id="shc-header">
-        <section>
-            <h1>Squad Health Check</h1>
-            <br />
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half-o"></span>
-            <p>Increased awareness of where<br/>the squad is at, it’s state,<br/>challenges and opportunities.</p>
-        </section>
-        <router-link to="/"><img src="../assets/logo.png" /></router-link>
-    </div>
+    <v-container class="secondary primary--text text-center" fluid>
+        <h1 class="pt-6">Squad Health Check</h1>
+        <v-col class="subtitle-1 text--line-height-s">
+            <v-rating v-model="rating" size="14" readonly dense half-increments class="pb-2"></v-rating>
+            <span>Increased awareness of where<v-spacer></v-spacer>the squad is at, it’s state,<v-spacer></v-spacer>challenges and opportunities.</span>
+        </v-col>
+        <router-link to="/"><v-img src="../assets/logo.png" width="7rem"></v-img></router-link>
+    </v-container>
 </template>
 
 <style scoped>
-    #shc-header{
-        color: white;
-        text-align: center;
-        background-color: #FFA200;
-        border-bottom-left-radius: 50% 15%;
-        border-bottom-right-radius: 50% 15%;
-    }
-
-    section {
-        height: 16em;
-    }
-
-    section h1 {
-        padding-top: 1.75em;
-    }
-
-    section span {
-        padding-left: 0.5em;
-        font-size: 0.75em;
-    }
-
-    section p {
-        margin-top: 0.25em;
-        line-height: 1em;
-    }
-
-    img {
+/* img {
         width: 7em;
         position: absolute;
         margin-left: auto;
@@ -50,5 +19,12 @@
         right: 0;
         text-align: center;
         top: 12.5em;
-    }
+}*/
 </style>
+<script>
+  export default {
+    data: () => ({
+      rating: 4.5,
+    }),
+  }
+</script>
