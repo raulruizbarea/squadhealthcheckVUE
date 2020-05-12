@@ -15,9 +15,14 @@
             @click:append="enterCodeClick"
             outlined
             rounded
+            hide-details
           ></v-text-field>
+          <div>
+            <h5><span>OR</span></h5>
+          </div>
           <v-btn min-width="400" to="/create" color="secondary" x-large elevation="10" rounded>CREATE</v-btn>
         </v-container>
+
         <!-- Mobile -->
         <v-container class="text-center hidden-sm-and-up" fluid>
           <v-text-field
@@ -28,13 +33,31 @@
             @click:append="enterCodeClick"
             outlined
             rounded
+            hide-details
           ></v-text-field>
+          <div>
+            <h5><span>OR</span></h5>
+          </div>
           <v-btn  block to="/create" color="secondary" x-large elevation="10" rounded>CREATE</v-btn>
         </v-container>
       </v-row>
     </v-col>
   </v-container>
 </template>
+
+<style scoped>
+h5 {
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 1em 30% 1em 30%;
+  } 
+
+  h5 span { 
+    background:#fff; 
+    padding:0 10px; 
+  }
+</style>
 
 <script>
   import Header from "../components/Header";
@@ -46,7 +69,7 @@
     },
     methods: {
       enterCodeClick () {
-        this.$router.push('create')
+        this.$router.push('survey')
       },
     },
   }

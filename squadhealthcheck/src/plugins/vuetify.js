@@ -11,5 +11,8 @@ export default new Vuetify({
         secondary: '#FFA200',
       },
     },
+    options: {
+      customProperties: true,
+    },
   },
 });

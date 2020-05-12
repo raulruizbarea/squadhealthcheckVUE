@@ -1,6 +1,6 @@
 <template>
-  <div class="create">
-    Create
+  <v-container class="create">
+    Create view
     <form-wizard title="" subtitle="">
       <tab-content>
         My first tab content
@@ -12,7 +12,7 @@
         Yuhuuu! This seems pretty damn simple
       </tab-content>
     </form-wizard>
-  </div>
+  </v-container>
 </template>
 
 <script>

@@ -10,3 +10,7 @@
 .text--line-height-l {
   line-height: 1.5rem !important;
 }
+
+.v-icon:hover {
+  color: var(--v-secondary-base);
+}
