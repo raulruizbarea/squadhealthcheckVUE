@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <shc-header />
     <v-content> 
       <router-view/>
     </v-content>
@@ -9,14 +8,12 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+  import Footer from "./components/Footer";
 
-export default {
-  name: 'App',
-  components:{
-    'shc-header': Header,
-    'shc-footer': Footer,
-  },
-}
+  export default {
+    name: 'App',
+    components:{
+      'shc-footer': Footer,
+    },
+  }
 </script>
