@@ -6,16 +6,17 @@
       <h2 class="headline font-weight-bold mb-3">Get moving with the Squad</h2>
       <v-row justify="center">
         <v-container class="text-center" fluid>
-          <!-- Hola -->
-          <!-- Hola 2 -->
           <v-text-field
+            class="custom-placeholer-color"
             label="Enter code"
             color="secondary"
-            append-icon="mdi-arrow-right"
+            append-icon="mdi-arrow-right-circle-outline"
+            @click:append="enterCodeClick"
             outlined
+            rounded
           ></v-text-field>
-          <v-btn class="hidden-xs-only" min-width="400" to="/create" color="secondary" x-large elevation="10">CREATE</v-btn>
-          <v-btn class="hidden-sm-and-up" block to="/create" color="secondary" x-large elevation="10">CREATE</v-btn>
+          <v-btn class="hidden-xs-only" min-width="400" to="/create" color="secondary" x-large elevation="10" rounded>CREATE</v-btn>
+          <v-btn class="hidden-sm-and-up" block to="/create" color="secondary" x-large elevation="10" rounded>CREATE</v-btn>
         </v-container>
       </v-row>
     </v-col>
@@ -29,6 +30,11 @@
     name: 'Home',
     components:{
       'shc-header': Header,
+    },
+    methods: {
+      enterCodeClick () {
+        this.$router.push('create')
+      },
     },
   }
 </script>
