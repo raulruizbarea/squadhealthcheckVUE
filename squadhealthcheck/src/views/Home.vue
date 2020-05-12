@@ -6,6 +6,7 @@
       <h2 class="headline font-weight-bold mb-3">Get moving with the Squad</h2>
       <v-row justify="center">
         <v-container class="text-center" fluid>
+          <!-- Hola -->
           <v-text-field
             label="Enter code"
             color="secondary"
