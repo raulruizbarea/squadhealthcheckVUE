@@ -16,6 +16,9 @@
             outlined
             rounded
             hide-details
+            v-model="surveyCode"
+            maxlength="4"
+            @keypress="onlyNumber"
           ></v-text-field>
           <div>
             <h5><span>OR</span></h5>
@@ -34,6 +37,9 @@
             outlined
             rounded
             hide-details
+            v-model="surveyCode"
+            maxlength="4"
+            @keypress="onlyNumber"
           ></v-text-field>
           <div>
             <h5><span>OR</span></h5>
@@ -47,7 +53,7 @@
 
 <style scoped>
 h5 {
-    text-align: center; 
+    text-align: center;
     border-bottom: 1px solid #000; 
     line-height: 0.1em;
     margin: 1em 30% 1em 30%;
@@ -69,8 +75,21 @@ h5 {
     },
     methods: {
       enterCodeClick () {
-        this.$router.push('survey')
+        //console.log(this.surveyCode);
+        if (this.surveyCode.length == 4 && !isNaN(this.surveyCode)) {
+          this.$router.push('survey');
+        }
       },
     },
+    data: () => ({
+      surveyCode: "",
+      onlyNumber($event) {
+        //console.log($event.keyCode); //keyCodes value
+        let keyCode = ($event.keyCode ? $event.keyCode : $event.which);
+        if ((keyCode < 48 || keyCode > 57) && keyCode !== 46) { // 46 is dot
+            $event.preventDefault();
+        }
+      }
+    }),
   }
 </script>
