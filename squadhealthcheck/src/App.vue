@@ -17,8 +17,8 @@ import Footer from "./components/Footer";
 export default {
   name: 'App',
   components:{
-        'shc-header': Header,
-        'shc-footer': Footer,
+    'shc-header': Header,
+    'shc-footer': Footer,
   },
-};
+}
 </script>
