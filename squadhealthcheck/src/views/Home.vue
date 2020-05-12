@@ -7,6 +7,7 @@
       <v-row justify="center">
         <v-container class="text-center" fluid>
           <!-- Hola -->
+          <!-- Hola 2 -->
           <v-text-field
             label="Enter code"
             color="secondary"
