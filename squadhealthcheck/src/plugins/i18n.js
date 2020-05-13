@@ -22,6 +22,10 @@ export const i18n = new VueI18n({
       surveyView: 'Survey view',
       //Create
       createView: 'Create view',
+      squadName: 'Squad name',
+      sprintNumber: 'Sprint number',
+      squadSize: 'Squad size',
+      anonymous: 'Anonymous',
       //Footer
       terms: 'By using this application, you agree to our<br /><strong>Terms of Service</strong> and <strong>Privacy Policy</strong>',
     }, 
@@ -39,6 +43,10 @@ export const i18n = new VueI18n({
       surveyView: 'Vista de encuesta',
       //Create
       createView: 'Vista de creación',
+      squadName: 'Nombre de escuadrón',
+      sprintNumber: 'Número de sprint',
+      squadSize: 'Tamaño del escuadrón',
+      anonymous: 'Anónimo',
       //Footer
       terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong> Términos de servicio </strong> y <strong> Política de privacidad </strong>',
     } 
