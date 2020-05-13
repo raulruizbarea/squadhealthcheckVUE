@@ -1,5 +1,16 @@
 <template>
-    <v-container>
+    <v-container fluid pa-0>
+        <tool-bar />
         {{ $t('surveyView') }}
     </v-container>
 </template>
+
+<script>
+  import ToolBar from '../components/ToolBar';
+  
+  export default {
+    components: {
+      'tool-bar': ToolBar,
+    }
+  }
+</script>
