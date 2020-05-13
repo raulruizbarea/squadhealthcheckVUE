@@ -1,6 +1,6 @@
 <template>
   <v-container class="create">
-    Create view
+    {{ $t('createView') }}
     <form-wizard title="" subtitle="">
       <tab-content>
         My first tab content

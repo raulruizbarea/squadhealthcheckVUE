@@ -1,5 +1,5 @@
 <template>
     <v-container>
-        Survey view
+        {{ $t('surveyView') }}
     </v-container>
 </template>

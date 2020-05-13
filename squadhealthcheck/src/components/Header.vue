@@ -1,9 +1,10 @@
 <template>
   <v-container class="secondary primary--text text-center shc-header" fluid>
-    <h1 class="pt-6">Squad Health Check</h1>
+    <shc-lang />
+    <h1 class="pt-2">{{ $t('appName') }}</h1>
     <v-col class="subtitle-1 text--line-height-s mb-12">
       <v-rating v-model="rating" size="14" readonly dense half-increments class="pb-2"></v-rating>
-      <span v-html="slogan"></span>
+      <span v-html="$t('slogan')"></span>
     </v-col>
     <router-link to="/"><v-img src="../assets/logo.png" width="7rem" class="shc-img"></v-img></router-link>
   </v-container>
@@ -26,11 +27,15 @@
 </style>
 
 <script>
+  import LanguageSwitcher from "./LanguageSwitcher";
+
   export default {
     name: 'Header',
+    components:{
+      'shc-lang': LanguageSwitcher,
+    },
     data: () => ({
       rating: 4.5,
-      slogan: 'Increased awareness of where<br/>the squad is at, it’s state,<br/>challenges and opportunities.',
     }),
   }
 </script>
