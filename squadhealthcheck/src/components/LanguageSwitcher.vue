@@ -3,13 +3,11 @@
         <v-container fluid pa-0>
             <v-row justify="end">
                 <div v-for="(lang, index) in languages" :key="lang">
-                    <v-item>
-                        <div class="mr-2 svh-language-switcher-pointer" 
-                            :class="{'font-weight-bold': index === activeItem, 'mr-4': index === languages.length-1}"
-                            @click="changeLang(lang, index)">                            
-                            {{ lang.toUpperCase() }}
-                        </div>
-                    </v-item>
+                    <v-btn text dark depressed small tile :ripple="false"
+                        :class="{'font-weight-bold': index === activeItem }"
+                        @click="changeLang(lang, index)">                            
+                        {{ lang.toUpperCase() }}
+                    </v-btn>
                 </div>
             </v-row>
         </v-container>
@@ -17,9 +15,9 @@
 </template>
 
 <style scoped>
-    .svh-language-switcher-pointer {
-        cursor: pointer;
-    }
+.v-btn:before {
+  display: none;
+}
 </style>
 
 <script>

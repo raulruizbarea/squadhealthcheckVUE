@@ -8,7 +8,6 @@
         <!-- Not Mobile -->
         <v-container class="text-center hidden-xs-only" style="max-width: 420px;">
           <v-text-field
-            class="custom-placeholer-color"
             v-bind:label="$t('enterCode')"
             color="secondary"
             append-icon="mdi-arrow-right-circle-outline"
@@ -29,7 +28,6 @@
         <!-- Mobile -->
         <v-container class="text-center hidden-sm-and-up" fluid>
           <v-text-field
-            class="custom-placeholer-color"
             v-bind:label="$t('enterCode')"
             color="secondary"
             append-icon="mdi-arrow-right-circle-outline"
