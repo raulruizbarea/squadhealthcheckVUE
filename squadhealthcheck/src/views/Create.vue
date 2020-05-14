@@ -67,7 +67,7 @@
         </v-stepper-content>
 
         <v-stepper-step :complete="e6 > 2" step="2" color="secondary">
-          Awaiting squad team
+          {{$t('awaitingTeam')}}
           <small>{{$t('next')}}: {{$t('status')}}</small>
         </v-stepper-step>
 
