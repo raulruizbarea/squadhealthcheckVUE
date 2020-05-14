@@ -3,7 +3,9 @@
         <v-btn to="/" icon>
             <v-icon>mdi-arrow-left</v-icon>
         </v-btn>
-        <!--<v-toolbar-title>Title</v-toolbar-title>-->
+        <v-spacer></v-spacer>
+        <v-toolbar-title primary>{{ $t('appName') }}</v-toolbar-title>
+        <v-spacer></v-spacer>
     </v-toolbar>
 </template>
 
