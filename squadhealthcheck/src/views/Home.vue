@@ -6,7 +6,7 @@
       <h2 class="headline font-weight-bold mb-3">{{ $t('squadMsg') }}</h2>
       <v-row justify="center">
         <!-- Not Mobile -->
-        <v-container class="text-center hidden-xs-only" style="max-width: 420px;">
+        <v-container class="text-center hidden-xs-only" style="max-width: 420px;" fluid>
           <v-text-field
             v-bind:label="$t('enterCode')"
             color="secondary"
@@ -46,7 +46,6 @@
         </v-container>
       </v-row>
     </v-col>
-    <shc-footer />
   </v-container>
 </template>
 
@@ -66,13 +65,11 @@
 
 <script>
   import Header from "../components/Header";
-  import Footer from "../components/Footer";
 
   export default {
     name: 'Home',
     components:{
       'shc-header': Header,
-      'shc-footer': Footer,
     },
     methods: {
       enterCodeClick () {
