@@ -3,7 +3,7 @@
         <v-container fluid pa-0>
             <v-row justify="end">
                 <div v-for="(lang, index) in languages" :key="lang">
-                    <v-btn text dark depressed small tile :ripple="false"
+                    <v-btn text dark depressed small tile :ripple="false" min-width="20" class="px-0 mr-4"
                         :class="{'font-weight-bold': index === activeItem }"
                         @click="changeLang(lang, index)">                            
                         {{ lang.toUpperCase() }}
