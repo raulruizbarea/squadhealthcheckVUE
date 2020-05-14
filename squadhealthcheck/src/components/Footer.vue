@@ -1,5 +1,5 @@
 <template>
-    <v-footer padless color="primary">
+    <v-footer padless color="primary" v-if="!$route.meta.hideNavigation">
         <v-col class="caption text-center text--secondary text--line-height-s" v-html="$t('terms')">
         </v-col>
     </v-footer>

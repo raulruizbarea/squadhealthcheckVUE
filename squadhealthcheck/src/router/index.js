@@ -16,7 +16,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "create" */ '../views/Create.vue')
+    component: () => import(/* webpackChunkName: "create" */ '../views/Create.vue'),
+    meta: { hideNavigation: true }
   },
   {
     path: '/survey',
@@ -24,7 +25,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "create" */ '../views/Survey.vue')
+    component: () => import(/* webpackChunkName: "create" */ '../views/Survey.vue'),
+    meta: { hideNavigation: true }
   },
 ]
 
