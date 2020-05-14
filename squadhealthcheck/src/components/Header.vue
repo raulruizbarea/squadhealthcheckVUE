@@ -1,7 +1,7 @@
 <template>
   <v-container class="secondary primary--text text-center shc-header" fluid>
     <shc-lang />
-    <h1 class="pt-2">{{ $t('appName') }}</h1>
+    <h1>{{ $t('appName') }}</h1>
     <v-col class="subtitle-1 text--line-height-s mb-12">
       <v-rating v-model="rating" size="14" readonly dense half-increments class="pb-2"></v-rating>
       <span v-html="$t('slogan')"></span>
