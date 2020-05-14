@@ -4,8 +4,8 @@
     <v-container fluid>
       <v-stepper v-model="e6" vertical class="elevation-0">
         <v-stepper-step :complete="e6 > 1" step="1" color="secondary">
-          Select the Squad information
-          <!--small>Summarize if needed</small-->
+          {{ $t('createStepMsg1') }}
+          <small>Next: Awaiting squad team</small>
         </v-stepper-step>
 
         <v-stepper-content step="1">
@@ -18,24 +18,34 @@
             color="secondary"
           ></v-text-field>
           <v-subheader class="pl-0">{{ $t('sprintNumber') }}</v-subheader>
+          <span
+            class="subtitle-1"
+            v-text="currentSprint"
+          ></span>
           <v-slider
             v-model="currentSprint"
             color="secondary"
             track-color="gray"
-            thumb-label="true"
+            :thumb-label="true"
             min="1"
             max="50"
+            class="px-5"
             :thumb-size="24"
             hide-details
           ></v-slider>
           <v-subheader class="pl-0">{{ $t('squadSize') }}</v-subheader>
+          <span
+            class="subtitle-1"
+            v-text="currentSize"
+          ></span>
           <v-slider
             v-model="currentSize"
             color="secondary"
             track-color="gray"
-            thumb-label="true"
+            :thumb-label="true"
             min="2"
             max="20"
+            class="px-5"
             :thumb-size="24"
             hide-details
           ></v-slider>
@@ -47,30 +57,47 @@
               inset>
             </v-switch>
           </v-layout>
-          <v-btn block to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn>
-          
-          <v-btn color="secondary" @click="e6 = 2">Continue</v-btn>
-          <v-btn text>Cancel</v-btn>
+          <!--v-btn block to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn-->
+          <v-row justify="end" class="px-4">
+            <v-btn :ripple="false" text @click="$router.go(-1)" class="btnNoEffect">Cancel</v-btn>
+            <v-btn color="secondary" @click="e6 = 2">Continue</v-btn>
+          </v-row>
         </v-stepper-content>
 
-        <v-stepper-step :complete="e6 > 2" step="2" color="secondary">Configure analytics for this app</v-stepper-step>
+        <v-stepper-step :complete="e6 > 2" step="2" color="secondary">
+          Awaiting squad team
+          <small>Next: Status</small>
+        </v-stepper-step>
 
         <v-stepper-content step="2">
           <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
-          <v-btn color="secondary" @click="e6 = 3">Continue</v-btn>
-          <v-btn text>Cancel</v-btn>
+          <v-row justify="end" class="px-4">
+            <v-btn :ripple="false" text @click="e6 = 1" class="btnNoEffect">Cancel</v-btn>
+            <v-btn color="secondary" @click="e6 = 3">Continue</v-btn>
+          </v-row>
         </v-stepper-content>
 
-        <v-stepper-step :complete="e6 > 3" step="3" color="secondary">Select an ad format and name ad unit</v-stepper-step>
+        <v-stepper-step :complete="e6 > 3" step="3" color="secondary">
+          Status
+        </v-stepper-step>
 
         <v-stepper-content step="3">
           <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
-          <v-btn color="secondary" @click="e6 = 1">Finish</v-btn>
+          <v-row justify="end" class="px-4">
+            <v-btn :ripple="false" text @click="e6 = 2" class="btnNoEffect">Cancel</v-btn>
+            <v-btn color="secondary">Finish</v-btn>
+          </v-row>
         </v-stepper-content>
       </v-stepper>      
     </v-container>
   </v-container>
 </template>
+
+<style scoped>
+.btnNoEffect:before {
+  display: none;
+}
+</style>
 
 <script>
   import ToolBar from '../components/ToolBar';
