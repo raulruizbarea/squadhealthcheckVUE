@@ -14,6 +14,7 @@ export const i18n = new VueI18n({
       continue: 'Continue',
       cancel: 'Cancel',
       finish: 'Finish',
+      start: 'Start',
       //Home
       appName: 'Squad Health Check',
       slogan: 'Increased awareness of where<br/>the squad is at, it’s state,<br/>challenges and opportunities.',
@@ -33,6 +34,9 @@ export const i18n = new VueI18n({
       next: 'Next',
       awaitingTeam: 'Awaiting squad team',
       status: 'Status',
+      sprint: 'Sprint',
+      members: 'Members',
+      shareCodeMsg: 'Share this code with your squad',
       //Footer
       terms: 'By using this application, you agree to our<br /><strong>Terms of Service</strong> and <strong>Privacy Policy</strong>',
     }, 
@@ -42,6 +46,7 @@ export const i18n = new VueI18n({
       continue: 'Continuar',
       cancel: 'Cancelar',
       finish: 'Terminar',
+      start: 'Empezar',
       //Home
       appName: 'Squad Health Check',
       slogan: 'Mayor conciencia de dónde está <br/> el escuadrón, su estado, <br/> desafíos y oportunidades.',
@@ -61,6 +66,9 @@ export const i18n = new VueI18n({
       next: 'Siguiente',
       awaitingTeam: 'Esperando al escuadrón',
       status: 'Estado',
+      sprint: 'Sprint',
+      members: 'Miembros',
+      shareCodeMsg: 'Comparte este código con tu escuadrón',
       //Footer
       terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong> Términos de servicio </strong> y <strong> Política de privacidad </strong>',
     } 
