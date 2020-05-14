@@ -60,8 +60,8 @@
             </v-layout>
             <!--v-btn block to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn-->
             <v-row justify="end" class="px-4">
-              <v-btn :ripple="false" text @click="$router.go(-1)" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-              <v-btn :disabled="!step1Valid" color="secondary" @click="e6 = 2">{{$t('continue')}}</v-btn>
+              <v-btn small :ripple="false" text @click="$router.go(-1)" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+              <v-btn small :disabled="!step1Valid" color="secondary" @click="e6 = 2">{{$t('continue')}}</v-btn>
             </v-row>
           </v-form>
         </v-stepper-content>
@@ -72,10 +72,23 @@
         </v-stepper-step>
 
         <v-stepper-content step="2">
-          <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
+          <div>
+            <h4>{{ squadName }}</h4>
+            <p class="my-0">{{$t('sprint')}}: {{currentSprint}}</p>
+            <p>{{currentSize}} {{$t('members').toLowerCase()}}</p>
+          </div>
+          <p class="subtitle-2 text-center font-weight-bold">{{$t('shareCodeMsg')}}</p>
+          <div class="text-center">
+            <code class="display-2 black--text">0123</code>
+          </div>
+          <p class="caption my-2 text-center">
+            Waiting for your squad...
+            <v-spacer></v-spacer>2/9 connected
+          </p>
+
           <v-row justify="end" class="px-4">
-            <v-btn :ripple="false" text @click="e6 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-            <v-btn :disabled="!step1Valid" color="secondary" @click="e6 = 3">{{$t('continue')}}</v-btn>
+            <v-btn small :ripple="false" text @click="e6 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+            <v-btn small :disabled="!step1Valid" color="secondary" @click="e6 = 3">{{$t('continue')}}</v-btn>
           </v-row>
         </v-stepper-content>
 
@@ -86,8 +99,8 @@
         <v-stepper-content step="3">
           <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
           <v-row justify="end" class="px-4">
-            <v-btn :ripple="false" text @click="e6 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-            <v-btn :disabled="!step1Valid" color="secondary">{{$t('finish')}}</v-btn>
+            <v-btn small :ripple="false" text @click="e6 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+            <v-btn small :disabled="!step1Valid" color="secondary">{{$t('finish')}}</v-btn>
           </v-row>
         </v-stepper-content>
       </v-stepper>      
