@@ -26,6 +26,7 @@ export const i18n = new VueI18n({
       sprintNumber: 'Sprint number',
       squadSize: 'Squad size',
       anonymous: 'Anonymous',
+      createStepMsg1: 'Select the Squad information',
       //Footer
       terms: 'By using this application, you agree to our<br /><strong>Terms of Service</strong> and <strong>Privacy Policy</strong>',
     }, 
@@ -47,6 +48,7 @@ export const i18n = new VueI18n({
       sprintNumber: 'Número de sprint',
       squadSize: 'Tamaño del escuadrón',
       anonymous: 'Anónimo',
+      createStepMsg1: 'Seleccione la información del escuadrón',
       //Footer
       terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong> Términos de servicio </strong> y <strong> Política de privacidad </strong>',
     } 
