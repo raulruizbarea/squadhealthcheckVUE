@@ -5,7 +5,7 @@
                 <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
-            <v-toolbar-title primary>{{ $t('appName') }}</v-toolbar-title>
+            <v-toolbar-title primary class="font-weight-bold">{{ $t('appName') }}</v-toolbar-title>
             <v-spacer></v-spacer>
             <shc-lang />
         </v-row>
