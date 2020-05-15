@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
     top: 11.5rem;
-    z-index: 999;
+    z-index: 2;
   }
 </style>
 
