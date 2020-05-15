@@ -17,6 +17,7 @@ export const i18n = new VueI18n({
       start: 'Start',
       submit: 'Submit',
       writeHere: 'Write your feedback here...',
+      optional: 'Optional',
       //Home
       appName: 'Squad Health Check',
       slogan: 'Increased awareness of where<br/>the squad is at, it’s state,<br/>challenges and opportunities.',
@@ -29,6 +30,7 @@ export const i18n = new VueI18n({
       //Create
       createView: 'Create view',
       squadName: 'Squad name',
+      projectName: 'Project name',
       sprintNumber: 'Sprint number',
       squadSize: 'Squad size',
       anonymous: 'Anonymous',
@@ -54,6 +56,7 @@ export const i18n = new VueI18n({
       start: 'Empezar',
       submit: 'Enviar',
       writeHere: 'Escriba sus comentarios aquí...',
+      optional: 'Opcional',
       //Home
       appName: 'Squad Health Check',
       slogan: 'Mayor conciencia de dónde está <br/> el escuadrón, su estado, <br/> desafíos y oportunidades.',
@@ -66,6 +69,7 @@ export const i18n = new VueI18n({
       //Create
       createView: 'Vista de creación',
       squadName: 'Nombre de escuadrón',
+      projectName: 'Nombre del proyecto',
       sprintNumber: 'Número de sprint',
       squadSize: 'Tamaño del escuadrón',
       anonymous: 'Anónimo',

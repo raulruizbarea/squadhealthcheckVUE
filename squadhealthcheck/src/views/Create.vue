@@ -18,6 +18,13 @@
               required
               color="secondary"
             ></v-text-field>
+            <v-text-field
+              v-model="projectName"
+              :counter="40"
+              :rules="projectNameRules"
+              v-bind:label="textFieldMsg"
+              color="secondary"
+            ></v-text-field>
             <v-subheader class="pl-0">{{ $t('sprintNumber') }}</v-subheader>
             <span
               class="subtitle-1"
@@ -34,7 +41,7 @@
               :thumb-size="24"
               hide-details
             ></v-slider>
-            <v-subheader class="pl-0">{{ $t('squadSize') }}</v-subheader>
+            <!--v-subheader class="pl-0">{{ $t('squadSize') }}</v-subheader>
             <span
               class="subtitle-1"
               v-text="currentSize"
@@ -49,7 +56,7 @@
               class="px-5"
               :thumb-size="24"
               hide-details
-            ></v-slider>
+            ></v-slider-->
             <v-layout column align-center>
               <v-switch 
                 v-model="anonymous" 
@@ -73,9 +80,10 @@
 
         <v-stepper-content step="2">
           <div>
-            <h4>{{ squadName }}</h4>
+            <h4>{{$t('squadName')}}: {{ squadName }}</h4>
+            <p class="my-0">{{$t('projectName')}}: {{projectName}}</p>
             <p class="my-0">{{$t('sprint')}}: {{currentSprint}}</p>
-            <p>{{currentSize}} {{$t('members').toLowerCase()}}</p>
+            <!--p>{{currentSize}} {{$t('members').toLowerCase()}}</p-->
           </div>
           <p class="subtitle-2 text-center font-weight-bold">{{$t('shareCodeMsg')}}</p>
           <div class="text-center">
@@ -125,9 +133,13 @@
         v => !!v || 'Squad name is required',
         v => (v && v.length <= 40) || 'Squad name must be less than 40 characters',
       ],
+      projectName: '',
+      projectNameRules: [
+        v => (v.length <= 40) || 'Project name must be less than 40 characters',
+      ],
       //satisfactionEmojis: ['😭', '😢', '☹️', '🙁', '😐', '🙂', '😊', '😁', '😄', '😍'],
       currentSprint: 1,
-      currentSize: 5,
+      //currentSize: 5,
       anonymous: false,
       e6: 1,
     }),
@@ -137,5 +149,10 @@
     methods: {
 
     },
+    computed: {
+      textFieldMsg() {
+        return this.$t('projectName') + " (" + this.$t('optional').toLowerCase() + ")";
+      },
+    }
   }
 </script>
