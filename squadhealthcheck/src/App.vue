@@ -9,16 +9,19 @@
       </v-container>
     </v-content>
     <shc-footer />
+    <shc-feedback />
   </v-app>
 </template>
 
 <script>
   import Footer from "./components/Footer";
+  import Feedback from "./components/Feedback";
 
   export default {
     name: 'App',
     components:{
       'shc-footer': Footer,
+      'shc-feedback': Feedback,
     },
   }
 </script>
