@@ -99,7 +99,7 @@
             return-object
             single-line
             dense
-            @change="resetSurveys"
+            @change="resetSurveys(survey.name)"
           ></v-select>
 
           <v-container fluid pa-0>
@@ -152,6 +152,7 @@
 
           <v-row justify="end" class="px-4">
             <v-btn small :ripple="false" text @click="e6 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+            <v-btn small color="error" class="mr-1" @click="resetSurveys(survey.name)">Reset</v-btn>
             <v-btn small :disabled="!step1Valid || survey.questions.length == 0" color="secondary" @click="e6 = 3">{{$t('continue')}}</v-btn>
           </v-row>
         </v-stepper-content>
@@ -216,8 +217,6 @@
   import ToolBar from '../components/ToolBar';
   import json from '../constants/surveys.json'
 
-  var surveysJson = JSON.parse(JSON.stringify(json));
-
   export default {
     data: () => ({
       show: false,
@@ -237,8 +236,8 @@
       //currentSize: 5,
       anonymous: false,
       e6: 1,
-      survey: surveysJson.en[0],
-      surveys: surveysJson.en,
+      survey: JSON.parse(JSON.stringify(json)).en[0],
+      surveys: JSON.parse(JSON.stringify(json)).en,
     }),
     components: {
       'tool-bar': ToolBar,
@@ -247,8 +246,9 @@
       deleteQuestion(index, survey) {
         survey.questions.splice(index, 1);
       },
-      resetSurveys() {
+      resetSurveys(name) {
         this.surveys = JSON.parse(JSON.stringify(json)).en.slice();
+        this.survey = this.surveys[this.surveys.findIndex(x => x.name === name)];
      }
     },
     computed: {
