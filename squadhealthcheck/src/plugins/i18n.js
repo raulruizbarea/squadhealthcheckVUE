@@ -26,7 +26,10 @@ export const i18n = new VueI18n({
       enterCode: 'Enter code',
       create: 'Create',
       //Survey
+      survey: 'Survey',
       surveyView: 'Survey view',
+      exampleOfCrappy: 'Example of crappy',
+      exampleOfAwesome: 'Example of awesome',
       //Create
       createView: 'Create view',
       squadName: 'Squad name',
@@ -35,6 +38,7 @@ export const i18n = new VueI18n({
       squadSize: 'Squad size',
       anonymous: 'Anonymous',
       createStepMsg1: 'Select the Squad information',
+      createStepMsg2: 'Select the Survey information',
       next: 'Next',
       awaitingTeam: 'Awaiting squad team',
       status: 'Status',
@@ -65,7 +69,10 @@ export const i18n = new VueI18n({
       enterCode: 'Introduce el código',
       create: 'Crear',
       //Survey
+      survey: 'Encuesta',
       surveyView: 'Vista de encuesta',
+      exampleOfCrappy: 'Ejemplo de mierda',
+      exampleOfAwesome: 'Ejemplo de asombroso',
       //Create
       createView: 'Vista de creación',
       squadName: 'Nombre de escuadrón',
@@ -74,6 +81,7 @@ export const i18n = new VueI18n({
       squadSize: 'Tamaño del escuadrón',
       anonymous: 'Anónimo',
       createStepMsg1: 'Seleccione la información del escuadrón',
+      createStepMsg2: 'Seleccione la información de la encuesta',
       next: 'Siguiente',
       awaitingTeam: 'Esperando al escuadrón',
       status: 'Estado',
