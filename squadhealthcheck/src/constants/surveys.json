@@ -1,364 +1,189 @@
 {
-    "en": {
-        "squadHealthCheck": {
-            "question1": {
-                "area": "Easy to release",
-                "exampleOfAwesome": "Releasing is simple, safe, painless & mostly automated.",
-                "exampleOfCrappy:": "Releasing is risky, painful, lots of manual work, and takes forever."
-            },
-            "question2": {
-                "area": "Suitable process",
-                "exampleOfAwesome": "Our way of working fits us perfectly.",
-                "exampleOfCrappy:": "Our way of working sucks."
-            },
-            "question3": {
-                "area": "Tech quality (code base health)",
-                "exampleOfAwesome": "We’re proud of the quality of our code! It is clean, easy to read, and has great test coverage.",
-                "exampleOfCrappy:": "Our code is a pile of dung, and technical debt is raging out of control."
-            },
-            "question4": {
-                "area": "Value",
-                "exampleOfAwesome": "We deliver great stuff! We're proud of it and our stakeholders are really happy.",
-                "exampleOfCrappy:": "We deliver crap. We feel ashamed to deliver it. Our stakeholders hate us."
-            },
-            "question5": {
-                "area": "Speed",
-                "exampleOfAwesome": "We get stuff done really quickly.No waiting, no delays.",
-                "exampleOfCrappy:": "We never seem to get done with anything.We keep getting stuck or interrupted. Stories keep getting stuck on dependencies."
-            },
-            "question6": {
-                "area": "Mission",
-                "exampleOfAwesome": "We know exactly why we are here, and we are really excited about it.",
-                "exampleOfCrappy:": "We have no idea why we are here, there is no high level picture or focus. Our so-called mission is completely unclear and uninspiring."
-            },
-            "question7": {
-                "area": "Fun",
-                "exampleOfAwesome": "We love going to work, and have great fun working together.",
-                "exampleOfCrappy:": "Boooooooring."
-            },
-            "question8": {
-                "area": "Learning",
-                "exampleOfAwesome": "We’re learning lots of interesting stuff all the time!",
-                "exampleOfCrappy:": "We never have time to learn anything."
-            },
-            "question9": {
-                "area": "Support",
-                "exampleOfAwesome": "We always get great support & help when we ask for it!",
-                "exampleOfCrappy:": "We keep getting stuck because we can’t get the support & help that we ask for."
-            },
-            "question10": {
-                "area": "Pawns or players",
-                "exampleOfAwesome": "We are in control of our destiny! We decide what to build and how to build it.",
-                "exampleOfCrappy:": "We are just pawns in a game of chess, with no influence over what we build or how we build it."
-            }
+    "en": [
+        {
+            "name": "Squad Health Check",
+            "questions": [
+                {
+                    "area": "Easy to release",
+                    "exampleOfAwesome": "Releasing is simple, safe, painless & mostly automated.",
+                    "exampleOfCrappy": "Releasing is risky, painful, lots of manual work, and takes forever."
+                },
+                {
+                    "area": "Suitable process",
+                    "exampleOfAwesome": "Our way of working fits us perfectly.",
+                    "exampleOfCrappy": "Our way of working sucks."
+                },
+                {
+                    "area": "Tech quality (code base health)",
+                    "exampleOfAwesome": "We’re proud of the quality of our code! It is clean, easy to read, and has great test coverage.",
+                    "exampleOfCrappy": "Our code is a pile of dung, and technical debt is raging out of control."
+                },
+                {
+                    "area": "Value",
+                    "exampleOfAwesome": "We deliver great stuff! We're proud of it and our stakeholders are really happy.",
+                    "exampleOfCrappy": "We deliver crap. We feel ashamed to deliver it. Our stakeholders hate us."
+                },
+                {
+                    "area": "Speed",
+                    "exampleOfAwesome": "We get stuff done really quickly.No waiting, no delays.",
+                    "exampleOfCrappy": "We never seem to get done with anything.We keep getting stuck or interrupted. Stories keep getting stuck on dependencies."
+                },
+                {
+                    "area": "Mission",
+                    "exampleOfAwesome": "We know exactly why we are here, and we are really excited about it.",
+                    "exampleOfCrappy": "We have no idea why we are here, there is no high level picture or focus. Our so-called mission is completely unclear and uninspiring."
+                },
+                {
+                    "area": "Fun",
+                    "exampleOfAwesome": "We love going to work, and have great fun working together.",
+                    "exampleOfCrappy": "Boooooooring."
+                },
+                {
+                    "area": "Learning",
+                    "exampleOfAwesome": "We’re learning lots of interesting stuff all the time!",
+                    "exampleOfCrappy": "We never have time to learn anything."
+                },
+                {
+                    "area": "Support",
+                    "exampleOfAwesome": "We always get great support & help when we ask for it!",
+                    "exampleOfCrappy": "We keep getting stuck because we can’t get the support & help that we ask for."
+                },
+                {
+                    "area": "Pawns or players",
+                    "exampleOfAwesome": "We are in control of our destiny! We decide what to build and how to build it.",
+                    "exampleOfCrappy": "We are just pawns in a game of chess, with no influence over what we build or how we build it."
+                }
+            ]
         },
-        "teamHealthCheck": {
-            "question1": {
-                "area": "Trust & Safety",
-                "exampleOfAwesome": "I feel safe to be myself and to share my thoughts. We don't hesitate to engage in constructive conflicts.",
-                "exampleOfCrappy:": "Mistakes and failures arn't accepted. I don't feel safe to speak up in meetings. We avoid conflicts."
-            },
-            "question2": {
-                "area": "Dependability",
-                "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
-                "exampleOfCrappy:": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
-            },
-            "question3": {
-                "area": "Purpose",
-                "exampleOfAwesome": "I understand how our team contributes to the organisation, and our mission inspires me.",
-                "exampleOfCrappy:": "Our team's purpose is vague or unclear. We have no long-term focus."
-            },
-            "question4": {
-                "area": "Delivering Value",
-                "exampleOfAwesome": "I'm proud of the value we deliver to our users and stakeholders. We measure our impact, and learn from it.",
-                "exampleOfCrappy:": "I feel ashamed of the crap we deliver. Our stakeholders hate us."
-            },
-            "question5": {
-                "area": "Team Autonomy",
-                "exampleOfAwesome": "I feel we influence and shape our plans and destiny. We decide together how we want to work.",
-                "exampleOfCrappy:": "Someone else is always calling the shots. It's unclear to me what we are allowed to decide, and what we're not."
-            },
-            "question6": {
-                "area": "Teamwork",
-                "exampleOfAwesome": "I feel we often collaborate closely with each other toward common goals.",
-                "exampleOfCrappy:": "We work individually, and care little about what the others are doing."
-            },
-            "question7": {
-                "area": "Continuously Improve",
-                "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
-                "exampleOfCrappy:": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
-            },
-            "question8": {
-                "area": "Decisions",
-                "exampleOfAwesome": "I feel we are good at making decisions as a team. When stuck we de-scope the decision, or designs them as experiments.",
-                "exampleOfCrappy:": "We constantly get stuck in analysis paralysis. The few decisions we make are vague."
-            },
-            "question9": {
-                "area": "Sustainable pace",
-                "exampleOfAwesome": "I feel we have time to think ahead, and room to experiment and explore.",
-                "exampleOfCrappy:": "I feel stressed and overworked. We only focus on here and now."
-            },
-            "question10": {
-                "area": "Feedback",
-                "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each other's unproductive behaviours.",
-                "exampleOfCrappy:": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
-            },
-            "question11": {
-                "area": "Integrity",
-                "exampleOfAwesome": "We honor our working agreements even when we are put under pressure.",
-                "exampleOfCrappy:": "Our behaviors, collaboration and communication fall apart when we get stressed."
-            }
+        {
+            "name": "Team Health Check",
+            "questions" :[
+                {
+                    "area": "Trust & Safety",
+                    "exampleOfAwesome": "I feel safe to be myself and to share my thoughts. We don't hesitate to engage in constructive conflicts.",
+                    "exampleOfCrappy": "Mistakes and failures arn't accepted. I don't feel safe to speak up in meetings. We avoid conflicts."
+                },
+                {
+                    "area": "Dependability",
+                    "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
+                    "exampleOfCrappy": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
+                },
+                {
+                    "area": "Purpose",
+                    "exampleOfAwesome": "I understand how our team contributes to the organisation, and our mission inspires me.",
+                    "exampleOfCrappy": "Our team's purpose is vague or unclear. We have no long-term focus."
+                },
+                {
+                    "area": "Delivering Value",
+                    "exampleOfAwesome": "I'm proud of the value we deliver to our users and stakeholders. We measure our impact, and learn from it.",
+                    "exampleOfCrappy": "I feel ashamed of the crap we deliver. Our stakeholders hate us."
+                },
+                {
+                    "area": "Team Autonomy",
+                    "exampleOfAwesome": "I feel we influence and shape our plans and destiny. We decide together how we want to work.",
+                    "exampleOfCrappy": "Someone else is always calling the shots. It's unclear to me what we are allowed to decide, and what we're not."
+                },
+                {
+                    "area": "Teamwork",
+                    "exampleOfAwesome": "I feel we often collaborate closely with each other toward common goals.",
+                    "exampleOfCrappy": "We work individually, and care little about what the others are doing."
+                },
+                {
+                    "area": "Continuously Improve",
+                    "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
+                    "exampleOfCrappy": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
+                },
+                {
+                    "area": "Decisions",
+                    "exampleOfAwesome": "I feel we are good at making decisions as a team. When stuck we de-scope the decision, or designs them as experiments.",
+                    "exampleOfCrappy": "We constantly get stuck in analysis paralysis. The few decisions we make are vague."
+                },
+                {
+                    "area": "Sustainable pace",
+                    "exampleOfAwesome": "I feel we have time to think ahead, and room to experiment and explore.",
+                    "exampleOfCrappy": "I feel stressed and overworked. We only focus on here and now."
+                },
+                {
+                    "area": "Feedback",
+                    "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each other's unproductive behaviours.",
+                    "exampleOfCrappy": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
+                },
+                {
+                    "area": "Integrity",
+                    "exampleOfAwesome": "We honor our working agreements even when we are put under pressure.",
+                    "exampleOfCrappy": "Our behaviors, collaboration and communication fall apart when we get stressed."
+                }
+            ]
         },
-        "leadershipHealthCheck": {
-            "question1": {
-                "area": "Teams believe in us",
-                "exampleOfAwesome": "The teams trust that we are doing our best to help and support them, and that non-inclusive decisions are made with good intent.",
-                "exampleOfCrappy:": "We are unaware of problems and opportunities because people don't trust us enough to talk to us about them. Decisions are perceived as top-down."
-            },
-            "question2": {
-                "area": "Safety and Trust",
-                "exampleOfAwesome": "I feel safe to be myself and to share my thoughts in this team. I don't feel I need to pretend to be someone I'm not.",
-                "exampleOfCrappy:": "I don't feel safe to speak up in meetings. Mistakes and failures aren't accepted. I feel nervous on how I should behave."
-            },
-            "question3": {
-                "area": "Dependability",
-                "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
-                "exampleOfCrappy:": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
-            },
-            "question4": {
-                "area": "Stress Level",
-                "exampleOfAwesome": "I have room to think, and energy to deal with stressful situations.",
-                "exampleOfCrappy:": "I feel stressed and can't think straight. My work is mainly reactive."
-            },
-            "question5": {
-                "area": "Healthy conflicts",
-                "exampleOfAwesome": "I observe that we are honest, direct and respectful in our communication. We turn conflicts into healthy constructive dialogue.",
-                "exampleOfCrappy:": "We shy away from conflicts. Unresolved tensions has resulted in silence and grudges."
-            },
-            "question6": {
-                "area": "Decision-making",
-                "exampleOfAwesome": "It's clear to me how decisions are made and who makes them. We have the courage to make decisions fast, when needed.",
-                "exampleOfCrappy:": "Our way of making decisions is slow and we often get stuck in debates. It's unclear to me how decisions are made or who makes them."
-            },
-            "question7": {
-                "area": "Vision & Direction",
-                "exampleOfAwesome": "We have a strong narrative that tells us where we want to be in the future. We have clear metrics that guide us when prioritising.",
-                "exampleOfCrappy:": "We have very different (and sometimes competing) ideas on where we want to go. Each team runs their own show, striving towards different goals."
-            },
-            "question8": {
-                "area": "Culture & Values",
-                "exampleOfAwesome": "I see that my peers are role modeling the behaviours and values we want to live by.",
-                "exampleOfCrappy:": "We don't walk the talk. We send conflicting messages about our culture through our behaviors."
-            },
-            "question9": {
-                "area": "Servant Leadership",
-                "exampleOfAwesome": "We provide structure and support to the teams within which they can self-organize efficiently. We understand team dynamics and alter our leadership depending on the needs of the teams.",
-                "exampleOfCrappy:": "We don't provide close active leadership, nor convey clear expectations on desired behaviours. We don't trust the teams to make good decisions so we often intervene and engage in the details."
-            },
-            "question10": {
-                "area": "Transparency",
-                "exampleOfAwesome": "I believe we are transparent on decisions, plans and our intents. We communicate information and news in a timely fashion.",
-                "exampleOfCrappy:": "We are an information bottleneck. We don't share victories and failures."
-            },
-            "question11": {
-                "area": "Loyalty",
-                "exampleOfAwesome": "No one has hidden agendas. I feel that everyone’s loyalty is with THIS team.",
-                "exampleOfCrappy:": "The team feels like a diverse group of people with different goals, and loyalties that lies elsewhere."
-            },
-            "question12": {
-                "area": "Feedback",
-                "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each others unproductive behaviors.",
-                "exampleOfCrappy:": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
-            },
-            "question13": {
-                "area": "Continuously Improve",
-                "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
-                "exampleOfCrappy:": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
-            }
-        },
-        "custom": {
-
+        {
+            "name": "Leadership Health Check",
+            "questions": [
+                {
+                    "area": "Teams believe in us",
+                    "exampleOfAwesome": "The teams trust that we are doing our best to help and support them, and that non-inclusive decisions are made with good intent.",
+                    "exampleOfCrappy": "We are unaware of problems and opportunities because people don't trust us enough to talk to us about them. Decisions are perceived as top-down."
+                },
+                {
+                    "area": "Safety and Trust",
+                    "exampleOfAwesome": "I feel safe to be myself and to share my thoughts in this team. I don't feel I need to pretend to be someone I'm not.",
+                    "exampleOfCrappy": "I don't feel safe to speak up in meetings. Mistakes and failures aren't accepted. I feel nervous on how I should behave."
+                },
+                {
+                    "area": "Dependability",
+                    "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
+                    "exampleOfCrappy": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
+                },
+                {
+                    "area": "Stress Level",
+                    "exampleOfAwesome": "I have room to think, and energy to deal with stressful situations.",
+                    "exampleOfCrappy": "I feel stressed and can't think straight. My work is mainly reactive."
+                },
+                {
+                    "area": "Healthy conflicts",
+                    "exampleOfAwesome": "I observe that we are honest, direct and respectful in our communication. We turn conflicts into healthy constructive dialogue.",
+                    "exampleOfCrappy": "We shy away from conflicts. Unresolved tensions has resulted in silence and grudges."
+                },
+                {
+                    "area": "Decision-making",
+                    "exampleOfAwesome": "It's clear to me how decisions are made and who makes them. We have the courage to make decisions fast, when needed.",
+                    "exampleOfCrappy": "Our way of making decisions is slow and we often get stuck in debates. It's unclear to me how decisions are made or who makes them."
+                },
+                {
+                    "area": "Vision & Direction",
+                    "exampleOfAwesome": "We have a strong narrative that tells us where we want to be in the future. We have clear metrics that guide us when prioritising.",
+                    "exampleOfCrappy": "We have very different (and sometimes competing) ideas on where we want to go. Each team runs their own show, striving towards different goals."
+                },
+                {
+                    "area": "Culture & Values",
+                    "exampleOfAwesome": "I see that my peers are role modeling the behaviours and values we want to live by.",
+                    "exampleOfCrappy": "We don't walk the talk. We send conflicting messages about our culture through our behaviors."
+                },
+                {
+                    "area": "Servant Leadership",
+                    "exampleOfAwesome": "We provide structure and support to the teams within which they can self-organize efficiently. We understand team dynamics and alter our leadership depending on the needs of the teams.",
+                    "exampleOfCrappy": "We don't provide close active leadership, nor convey clear expectations on desired behaviours. We don't trust the teams to make good decisions so we often intervene and engage in the details."
+                },
+                {
+                    "area": "Transparency",
+                    "exampleOfAwesome": "I believe we are transparent on decisions, plans and our intents. We communicate information and news in a timely fashion.",
+                    "exampleOfCrappy": "We are an information bottleneck. We don't share victories and failures."
+                },
+                {
+                    "area": "Loyalty",
+                    "exampleOfAwesome": "No one has hidden agendas. I feel that everyone’s loyalty is with THIS team.",
+                    "exampleOfCrappy": "The team feels like a diverse group of people with different goals, and loyalties that lies elsewhere."
+                },
+                {
+                    "area": "Feedback",
+                    "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each others unproductive behaviors.",
+                    "exampleOfCrappy": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
+                },
+                {
+                    "area": "Continuously Improve",
+                    "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
+                    "exampleOfCrappy": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
+                }
+            ]
         }
-    },
-    "es": {
-        "squadHealthCheck": {
-            "question1": {
-                "area": "Easy to release",
-                "exampleOfAwesome": "Releasing is simple, safe, painless & mostly automated.",
-                "exampleOfCrappy:": "Releasing is risky, painful, lots of manual work, and takes forever."
-            },
-            "question2": {
-                "area": "Suitable process",
-                "exampleOfAwesome": "Our way of working fits us perfectly.",
-                "exampleOfCrappy:": "Our way of working sucks."
-            },
-            "question3": {
-                "area": "Tech quality (code base health)",
-                "exampleOfAwesome": "We’re proud of the quality of our code! It is clean, easy to read, and has great test coverage.",
-                "exampleOfCrappy:": "Our code is a pile of dung, and technical debt is raging out of control."
-            },
-            "question4": {
-                "area": "Value",
-                "exampleOfAwesome": "We deliver great stuff! We're proud of it and our stakeholders are really happy.",
-                "exampleOfCrappy:": "We deliver crap. We feel ashamed to deliver it. Our stakeholders hate us."
-            },
-            "question5": {
-                "area": "Speed",
-                "exampleOfAwesome": "We get stuff done really quickly.No waiting, no delays.",
-                "exampleOfCrappy:": "We never seem to get done with anything.We keep getting stuck or interrupted. Stories keep getting stuck on dependencies."
-            },
-            "question6": {
-                "area": "Mission",
-                "exampleOfAwesome": "We know exactly why we are here, and we are really excited about it.",
-                "exampleOfCrappy:": "We have no idea why we are here, there is no high level picture or focus. Our so-called mission is completely unclear and uninspiring."
-            },
-            "question7": {
-                "area": "Fun",
-                "exampleOfAwesome": "We love going to work, and have great fun working together.",
-                "exampleOfCrappy:": "Boooooooring."
-            },
-            "question8": {
-                "area": "Learning",
-                "exampleOfAwesome": "We’re learning lots of interesting stuff all the time!",
-                "exampleOfCrappy:": "We never have time to learn anything."
-            },
-            "question9": {
-                "area": "Support",
-                "exampleOfAwesome": "We always get great support & help when we ask for it!",
-                "exampleOfCrappy:": "We keep getting stuck because we can’t get the support & help that we ask for."
-            },
-            "question10": {
-                "area": "Pawns or players",
-                "exampleOfAwesome": "We are in control of our destiny! We decide what to build and how to build it.",
-                "exampleOfCrappy:": "We are just pawns in a game of chess, with no influence over what we build or how we build it."
-            }
-        },
-        "teamHealthCheck": {
-            "question1": {
-                "area": "Trust & Safety",
-                "exampleOfAwesome": "I feel safe to be myself and to share my thoughts. We don't hesitate to engage in constructive conflicts.",
-                "exampleOfCrappy:": "Mistakes and failures arn't accepted. I don't feel safe to speak up in meetings. We avoid conflicts."
-            },
-            "question2": {
-                "area": "Dependability",
-                "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
-                "exampleOfCrappy:": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
-            },
-            "question3": {
-                "area": "Purpose",
-                "exampleOfAwesome": "I understand how our team contributes to the organisation, and our mission inspires me.",
-                "exampleOfCrappy:": "Our team's purpose is vague or unclear. We have no long-term focus."
-            },
-            "question4": {
-                "area": "Delivering Value",
-                "exampleOfAwesome": "I'm proud of the value we deliver to our users and stakeholders. We measure our impact, and learn from it.",
-                "exampleOfCrappy:": "I feel ashamed of the crap we deliver. Our stakeholders hate us."
-            },
-            "question5": {
-                "area": "Team Autonomy",
-                "exampleOfAwesome": "I feel we influence and shape our plans and destiny. We decide together how we want to work.",
-                "exampleOfCrappy:": "Someone else is always calling the shots. It's unclear to me what we are allowed to decide, and what we're not."
-            },
-            "question6": {
-                "area": "Teamwork",
-                "exampleOfAwesome": "I feel we often collaborate closely with each other toward common goals.",
-                "exampleOfCrappy:": "We work individually, and care little about what the others are doing."
-            },
-            "question7": {
-                "area": "Continuously Improve",
-                "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
-                "exampleOfCrappy:": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
-            },
-            "question8": {
-                "area": "Decisions",
-                "exampleOfAwesome": "I feel we are good at making decisions as a team. When stuck we de-scope the decision, or designs them as experiments.",
-                "exampleOfCrappy:": "We constantly get stuck in analysis paralysis. The few decisions we make are vague."
-            },
-            "question9": {
-                "area": "Sustainable pace",
-                "exampleOfAwesome": "I feel we have time to think ahead, and room to experiment and explore.",
-                "exampleOfCrappy:": "I feel stressed and overworked. We only focus on here and now."
-            },
-            "question10": {
-                "area": "Feedback",
-                "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each other's unproductive behaviours.",
-                "exampleOfCrappy:": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
-            },
-            "question11": {
-                "area": "Integrity",
-                "exampleOfAwesome": "We honor our working agreements even when we are put under pressure.",
-                "exampleOfCrappy:": "Our behaviors, collaboration and communication fall apart when we get stressed."
-            }
-        },
-        "leadershipHealthCheck": {
-            "question1": {
-                "area": "Teams believe in us",
-                "exampleOfAwesome": "The teams trust that we are doing our best to help and support them, and that non-inclusive decisions are made with good intent.",
-                "exampleOfCrappy:": "We are unaware of problems and opportunities because people don't trust us enough to talk to us about them. Decisions are perceived as top-down."
-            },
-            "question2": {
-                "area": "Safety and Trust",
-                "exampleOfAwesome": "I feel safe to be myself and to share my thoughts in this team. I don't feel I need to pretend to be someone I'm not.",
-                "exampleOfCrappy:": "I don't feel safe to speak up in meetings. Mistakes and failures aren't accepted. I feel nervous on how I should behave."
-            },
-            "question3": {
-                "area": "Dependability",
-                "exampleOfAwesome": "I can depend on my team members. We follow through on commitments, and we hold each other accountable for our actions.",
-                "exampleOfCrappy:": "I don't trust my team members to do what they say they will do, or live up to things we've agreed upon."
-            },
-            "question4": {
-                "area": "Stress Level",
-                "exampleOfAwesome": "I have room to think, and energy to deal with stressful situations.",
-                "exampleOfCrappy:": "I feel stressed and can't think straight. My work is mainly reactive."
-            },
-            "question5": {
-                "area": "Healthy conflicts",
-                "exampleOfAwesome": "I observe that we are honest, direct and respectful in our communication. We turn conflicts into healthy constructive dialogue.",
-                "exampleOfCrappy:": "We shy away from conflicts. Unresolved tensions has resulted in silence and grudges."
-            },
-            "question6": {
-                "area": "Decision-making",
-                "exampleOfAwesome": "It's clear to me how decisions are made and who makes them. We have the courage to make decisions fast, when needed.",
-                "exampleOfCrappy:": "Our way of making decisions is slow and we often get stuck in debates. It's unclear to me how decisions are made or who makes them."
-            },
-            "question7": {
-                "area": "Vision & Direction",
-                "exampleOfAwesome": "We have a strong narrative that tells us where we want to be in the future. We have clear metrics that guide us when prioritising.",
-                "exampleOfCrappy:": "We have very different (and sometimes competing) ideas on where we want to go. Each team runs their own show, striving towards different goals."
-            },
-            "question8": {
-                "area": "Culture & Values",
-                "exampleOfAwesome": "I see that my peers are role modeling the behaviours and values we want to live by.",
-                "exampleOfCrappy:": "We don't walk the talk. We send conflicting messages about our culture through our behaviors."
-            },
-            "question9": {
-                "area": "Servant Leadership",
-                "exampleOfAwesome": "We provide structure and support to the teams within which they can self-organize efficiently. We understand team dynamics and alter our leadership depending on the needs of the teams.",
-                "exampleOfCrappy:": "We don't provide close active leadership, nor convey clear expectations on desired behaviours. We don't trust the teams to make good decisions so we often intervene and engage in the details."
-            },
-            "question10": {
-                "area": "Transparency",
-                "exampleOfAwesome": "I believe we are transparent on decisions, plans and our intents. We communicate information and news in a timely fashion.",
-                "exampleOfCrappy:": "We are an information bottleneck. We don't share victories and failures."
-            },
-            "question11": {
-                "area": "Loyalty",
-                "exampleOfAwesome": "No one has hidden agendas. I feel that everyone’s loyalty is with THIS team.",
-                "exampleOfCrappy:": "The team feels like a diverse group of people with different goals, and loyalties that lies elsewhere."
-            },
-            "question12": {
-                "area": "Feedback",
-                "exampleOfAwesome": "We give positive appraisals, but also provide constructive feedback on each others unproductive behaviors.",
-                "exampleOfCrappy:": "We rarely praise each other, or give feedback to each other for acting irresponsibly or breaking our Working Agreement."
-            },
-            "question13": {
-                "area": "Continuously Improve",
-                "exampleOfAwesome": "We passionately strive to figure out how to work better and more efficiently as a team. We try to “know” if we get better.",
-                "exampleOfCrappy:": "We don’t focus on questioning our process or way of working. If someone asked us to prove that we’ve gotten better we have no clue how we would demonstrate that."
-            }
-        },
-        "custom": {
-
-        }
-    }
+    ]
 }
