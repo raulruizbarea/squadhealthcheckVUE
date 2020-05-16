@@ -207,9 +207,9 @@
 </template>
 
 <style scoped>
-.btnNoEffect:before {
-  display: none;
-}
+  .btnNoEffect:before {
+    display: none;
+  }
 </style>
 
 <script>
