@@ -1,8 +1,8 @@
 <template>
     <v-container>
         <v-fab-transition>
-            <v-btn fab fixed bottom right color="secondary" @click="dialog = !dialog">
-                <v-icon>mdi-message-draw</v-icon>
+            <v-btn fab small fixed bottom right color="secondary" @click="dialog = !dialog">
+                <v-icon small>mdi-message-draw</v-icon>
             </v-btn>
         </v-fab-transition>
         <v-dialog v-model="dialog" max-width="500px">
