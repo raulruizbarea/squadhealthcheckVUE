@@ -2,18 +2,24 @@
   <v-container fluid pa-0>
     <tool-bar />
     <v-container fluid>
-      <v-stepper v-model="e6" vertical class="elevation-0">
-
-
+      <v-stepper v-model="e1" vertical class="elevation-0">
 
         <!-- STEP 1 -->
-        <v-stepper-step :complete="e6 > 1" step="1" color="secondary">
+        <v-stepper-step :complete="e1 > 1" step="1" color="secondary">
           {{ $t('createStepMsg1') }}
           <small>{{$t('next')}}: {{$t('createStepMsg2')}}</small>
         </v-stepper-step>
         
         <v-stepper-content step="1">
           <v-form ref="form" v-model="step1Valid">
+            <!--v-text-field
+              v-model="email"
+              :counter="50"
+              :rules="emailRules"
+              v-bind:label="$t('email')"
+              required
+              color="secondary"
+            ></v-text-field-->
             <v-text-field
               v-model="squadName"
               :counter="40"
@@ -72,7 +78,7 @@
             <!--v-btn block to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn-->
             <v-row justify="end" class="px-4">
               <v-btn small :ripple="false" text @click="$router.go(-1)" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-              <v-btn small :disabled="!step1Valid" color="secondary" @click="e6 = 2">{{$t('continue')}}</v-btn>
+              <v-btn small :disabled="!step1Valid" color="secondary" @click="e1 = 2">{{$t('continue')}}</v-btn>
             </v-row>
           </v-form>
         </v-stepper-content>
@@ -80,9 +86,9 @@
 
 
         <!-- STEP 2 -->
-         <v-stepper-step :complete="e6 > 2" step="2" color="secondary">
+         <v-stepper-step :complete="e1 > 2" step="2" color="secondary">
           {{$t('createStepMsg2')}}
-          <small>{{$t('next')}}: {{$t('awaitingTeam')}}</small>
+          <small>{{$t('next')}}: {{$t('summary')}}</small>
         </v-stepper-step>
 
         <v-stepper-content step="2">
@@ -151,55 +157,34 @@
           </v-container>
 
           <v-row justify="end" class="px-4">
-            <v-btn small :ripple="false" text @click="e6 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+            <v-btn small :ripple="false" text @click="e1 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
             <v-btn small color="error" class="mr-1" @click="resetSurveys(survey.name)">Reset</v-btn>
-            <v-btn small :disabled="!step1Valid || survey.questions.length == 0" color="secondary" @click="e6 = 3">{{$t('continue')}}</v-btn>
+            <v-btn small :disabled="!step1Valid || survey.questions.length == 0" color="secondary" @click="e1 = 3, setSurveyCode()">{{$t('continue')}}</v-btn>
           </v-row>
         </v-stepper-content>
 
 
 
         <!-- STEP 3 -->
-        <v-stepper-step :complete="e6 > 3" step="3" color="secondary">
-          {{$t('awaitingTeam')}}
-          <small>{{$t('next')}}: {{$t('status')}}</small>
+        <v-stepper-step :complete="e1 > 3" step="3" color="secondary">
+          {{$t('summary')}}
         </v-stepper-step>
 
         <v-stepper-content step="3">
           <div>
             <h4>{{$t('squadName')}}: {{ squadName }}</h4>
-            <p class="my-0">{{$t('projectName')}}: {{projectName}}</p>
+            <p v-if="projectName.length!=0" class="my-0">{{$t('projectName')}}: {{projectName}}</p>
             <p class="my-0">{{$t('sprint')}}: {{currentSprint}}</p>
             <p class="my-0">{{$t('survey')}}: {{survey.name}}</p>
-            <!--p>{{currentSize}} {{$t('members').toLowerCase()}}</p-->
           </div>
-          <p class="subtitle-2 text-center font-weight-bold">{{$t('shareCodeMsg')}}</p>
-          <div class="text-center">
-            <code class="display-2 black--text">0123</code>
+          <p class="subtitle-2 text-center font-weight-bold my-2">{{$t('shareCodeMsg')}}</p>
+          <div class="text-center my-2">
+            <code class="display-2 black--text">{{this.surveyCode}}</code>
           </div>
-          <p class="caption my-2 text-center">
-            Waiting for your squad...
-            <v-spacer></v-spacer>2/9 connected
-          </p>
 
           <v-row justify="end" class="px-4">
-            <v-btn small :ripple="false" text @click="e6 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-            <v-btn small :disabled="!step1Valid" color="secondary" @click="e6 = 4">{{$t('continue')}}</v-btn>
-          </v-row>
-        </v-stepper-content>
-
-
-
-        <!-- STEP 4 -->
-        <v-stepper-step :complete="e6 > 4" step="4" color="secondary">
-          {{$t('status')}}
-        </v-stepper-step>
-
-        <v-stepper-content step="4">
-          <v-card color="grey lighten-1" class="mb-12" height="200px"></v-card>
-          <v-row justify="end" class="px-4">
-            <v-btn small :ripple="false" text @click="e6 = 3" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-            <v-btn small :disabled="!step1Valid" color="secondary">{{$t('finish')}}</v-btn>
+            <v-btn small :ripple="false" text @click="e1 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
+            <v-btn small :disabled="!step1Valid" color="secondary" @click="createSurvey">{{$t('create')}}</v-btn>
           </v-row>
         </v-stepper-content>
       </v-stepper>      
@@ -215,13 +200,25 @@
 
 <script>
   import ToolBar from '../components/ToolBar';
-  import json from '../constants/surveys.json'
+  import json from '../constants/surveys.json';
+  import md5 from 'js-md5';
+  import db from '../firebaseInit';
+  import { STATUS } from '@/constants/surveyStatus';
 
   export default {
     data: () => ({
+      surveyId: null,
+      //surveyCode:  (Math.floor(Math.random() * 10000) + 10000).toString().substring(1),
+      surveyCode: null,
       show: false,
       currentQuestion: -1,
       step1Valid: true,
+      //email: '',
+      //emailRules: [
+      //  v => !!v || 'Email is required',
+      //  v => (v && v.length <= 50) || 'Email must be less than 50 characters',
+      //  v => !v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+      //],
       squadName: '',
       squadNameRules: [
         v => !!v || 'Squad name is required',
@@ -235,7 +232,7 @@
       currentSprint: 1,
       //currentSize: 5,
       anonymous: false,
-      e6: 1,
+      e1: 1,
       survey: JSON.parse(JSON.stringify(json)).en[0],
       surveys: JSON.parse(JSON.stringify(json)).en,
     }),
@@ -249,12 +246,39 @@
       resetSurveys(name) {
         this.surveys = JSON.parse(JSON.stringify(json)).en.slice();
         this.survey = this.surveys[this.surveys.findIndex(x => x.name === name)];
+     },
+     createSurvey(){
+       db.collection('surveys').add({
+          code: this.surveyCode,
+          status: STATUS.ACTIVE,
+          creationDate: Date.now(),
+          name: this.survey.name,
+          project: this.projectName,
+          sprint: this.currentSprint,
+          questions: this.survey.questions,
+        })
+        .then(docRef => {
+            console.log('Survey added: ', docRef.id);
+            this.surveyId = docRef.id;
+        })
+        .catch(error => {
+            console.error('Error updating survey: ', error);
+        })
+     },
+     setSurveyCode(){
+        this.surveyCode = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+
+        db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',3).get().then((querySnapshot) => {
+          if(querySnapshot.size > 0){
+            this.setSurveyCode();
+          }
+        });
      }
     },
     computed: {
       textFieldMsg() {
         return this.$t('projectName') + " (" + this.$t('optional').toLowerCase() + ")";
-      },
-    }
+      }
+    },    
   }
 </script>

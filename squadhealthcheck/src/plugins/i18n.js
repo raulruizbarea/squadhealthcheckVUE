@@ -30,7 +30,10 @@ export const i18n = new VueI18n({
       surveyView: 'Survey view',
       exampleOfCrappy: 'Example of crappy',
       exampleOfAwesome: 'Example of awesome',
+      surveyNotActive: 'The survey is not yet active',
       //Create
+      summary: 'Summary',
+      email: 'Email',
       createView: 'Create view',
       squadName: 'Squad name',
       projectName: 'Project name',
@@ -45,6 +48,8 @@ export const i18n = new VueI18n({
       sprint: 'Sprint',
       members: 'Members',
       shareCodeMsg: 'Share this code with your squad',
+      template: 'Template',
+      basedOn: 'Based on',
       //Footer
       terms: 'By using this application, you agree to our<br /><strong>Terms of Service</strong> and <strong>Privacy Policy</strong>',
       //Feedback
@@ -73,7 +78,10 @@ export const i18n = new VueI18n({
       surveyView: 'Vista de encuesta',
       exampleOfCrappy: 'Ejemplo de mierda',
       exampleOfAwesome: 'Ejemplo de asombroso',
+      surveyNotActive: 'La encuesta no está activa todavía',
       //Create
+      summary: 'Resumen',
+      email: 'Correo electrónico',
       createView: 'Vista de creación',
       squadName: 'Nombre de escuadrón',
       projectName: 'Nombre del proyecto',
@@ -88,6 +96,8 @@ export const i18n = new VueI18n({
       sprint: 'Sprint',
       members: 'Miembros',
       shareCodeMsg: 'Comparte este código con tu escuadrón',
+      template: 'Plantilla',
+      basedOn: 'Basada en',
       //Footer
       terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong> Términos de servicio </strong> y <strong> Política de privacidad </strong>',
       //Feedback
