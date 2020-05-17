@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container pa-0>
         <v-fab-transition>
             <v-btn fab small fixed bottom right color="secondary" @click="dialog = !dialog">
                 <v-icon small>mdi-message-draw</v-icon>
