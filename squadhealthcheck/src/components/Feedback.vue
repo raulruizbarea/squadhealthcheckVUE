@@ -7,7 +7,7 @@
         </v-fab-transition>
         <v-dialog v-model="dialog" max-width="500px">
           <v-card>
-              <v-alert type="info" color="secondary">{{$t('feedbackMsg1')}}!</v-alert>
+              <v-alert type="info" icon="mdi-comment-quote" color="secondary">{{$t('feedbackMsg1')}}!</v-alert>
             <!--v-card-title class="headline">{{$t('feedbackMsg1')}}</v-card-title-->
 
             <v-card-subtitle>{{$t('feedbackMsg2')}}</v-card-subtitle>
