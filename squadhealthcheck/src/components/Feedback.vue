@@ -7,7 +7,9 @@
         </v-fab-transition>
         <v-dialog v-model="dialog" max-width="500px">
           <v-card>
-            <v-card-title class="headline">{{$t('feedbackMsg1')}}</v-card-title>
+              <v-alert type="info" color="secondary">{{$t('feedbackMsg1')}}!</v-alert>
+            <!--v-card-title class="headline">{{$t('feedbackMsg1')}}</v-card-title-->
+
             <v-card-subtitle>{{$t('feedbackMsg2')}}</v-card-subtitle>
             <v-card-text>
                 <v-textarea v-model="feedback" :label="$t('writeHere')" clearable color="secondary"></v-textarea>
