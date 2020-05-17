@@ -159,7 +159,7 @@
           <v-row justify="end" class="px-4">
             <v-btn small :ripple="false" text @click="e1 = 1" class="btnNoEffect">{{$t('cancel')}}</v-btn>
             <v-btn small color="error" class="mr-1" @click="resetSurveys(survey.name)">Reset</v-btn>
-            <v-btn small :disabled="!step1Valid || survey.questions.length == 0" color="secondary" @click="e1 = 3, setSurveyCode()">{{$t('continue')}}</v-btn>
+            <v-btn small :disabled="!step1Valid || survey.questions.length == 0" color="secondary" @click="e1 = 3">{{$t('continue')}}</v-btn>
           </v-row>
         </v-stepper-content>
 
@@ -184,7 +184,19 @@
 
           <v-row justify="end" class="px-4">
             <v-btn small :ripple="false" text @click="e1 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
-            <v-btn small :disabled="!step1Valid" color="secondary" @click="createSurvey">{{$t('create')}}</v-btn>
+            <v-dialog v-model="dialog" persistent>
+              <template v-slot:activator="{ on }">
+                <v-btn small :disabled="!step1Valid" color="secondary" v-on="on" @click="createSurvey">{{$t('create')}}</v-btn>
+              </template>
+              <v-card>
+                <v-alert prominent type="warning">Administrator code</v-alert>
+                <v-card-text>Save this URL in order to enter as an administrator in your survey, if you lose it you will not be able to administrate the survey! /{{surveyId}}</v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="green darken-1" text @click="dialog = false" to="/">Confirm</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
           </v-row>
         </v-stepper-content>
       </v-stepper>      
@@ -207,6 +219,7 @@
 
   export default {
     data: () => ({
+      dialog: false,
       surveyId: null,
       //surveyCode:  (Math.floor(Math.random() * 10000) + 10000).toString().substring(1),
       surveyCode: null,
@@ -256,6 +269,7 @@
           project: this.projectName,
           sprint: this.currentSprint,
           questions: this.survey.questions,
+          anonymous: this.anonymous,
         })
         .then(docRef => {
             console.log('Survey added: ', docRef.id);
@@ -266,19 +280,22 @@
         })
      },
      setSurveyCode(){
-        this.surveyCode = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+      this.surveyCode = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
 
-        db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',3).get().then((querySnapshot) => {
-          if(querySnapshot.size > 0){
-            this.setSurveyCode();
-          }
-        });
+      db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',3).get().then((querySnapshot) => {
+        if(querySnapshot.size > 0){
+          this.setSurveyCode();
+        }
+      });
      }
     },
     computed: {
       textFieldMsg() {
         return this.$t('projectName') + " (" + this.$t('optional').toLowerCase() + ")";
       }
-    },    
+    },   
+    mounted() {
+      this.setSurveyCode();
+    },
   }
 </script>
