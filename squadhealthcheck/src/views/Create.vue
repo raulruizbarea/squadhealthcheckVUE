@@ -189,8 +189,26 @@
                 <v-btn small :disabled="!step1Valid" color="secondary" v-on="on" @click="createSurvey">{{$t('create')}}</v-btn>
               </template>
               <v-card>
-                <v-alert prominent type="warning">Administrator code</v-alert>
-                <v-card-text>Save this URL in order to enter as an administrator in your survey, if you lose it you will not be able to administrate the survey! /{{surveyId}}</v-card-text>
+                <v-alert prominent type="success" color="secondary">Yay! The survey is ready!</v-alert>
+                <v-card-text>
+                  <p class="subtitle-2 text-center font-weight-bold my-2">{{$t('shareCodeMsg')}}</p>
+                  <div class="text-center my-2">
+                    <code class="display-2 black--text">{{this.surveyCode}}</code>
+                  </div>
+                </v-card-text>
+                <v-alert dense text class="caption mx-10" type="info">Don't forget to copy the admin link!</v-alert>
+                <v-text-field
+                  readonly
+                  class="caption mx-6"
+                  dense
+                  hide-details
+                  append-icon="mdi-clipboard"
+                  color="secondary"
+                  outlined
+                  :value="surveyId"
+                  @click:append="copyLink"
+                   ref="container"
+                ></v-text-field>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn color="green darken-1" text @click="dialog = false" to="/">Confirm</v-btn>
@@ -287,6 +305,9 @@
           this.setSurveyCode();
         }
       });
+     },
+     async copyLink(){
+        return this.$copyText(this.surveyId, this.$refs.container.$el)
      }
     },
     computed: {
