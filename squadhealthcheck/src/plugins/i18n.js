@@ -10,7 +10,9 @@ export const i18n = new VueI18n({
   messages: { 
     en: { 
       //Global
-      or: 'or',
+      or: 'Or',
+      yes: 'Yes',
+      no: 'No',
       continue: 'Continue',
       cancel: 'Cancel',
       finish: 'Finish',
@@ -58,7 +60,9 @@ export const i18n = new VueI18n({
     }, 
     es: { 
       //Global
-      or: 'o',
+      or: 'O',
+      yes: 'Si',
+      no: 'No',
       continue: 'Continuar',
       cancel: 'Cancelar',
       finish: 'Terminar',
