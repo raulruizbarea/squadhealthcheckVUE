@@ -176,11 +176,12 @@
             <p v-if="projectName.length!=0" class="my-0">{{$t('projectName')}}: {{projectName}}</p>
             <p class="my-0">{{$t('sprint')}}: {{currentSprint}}</p>
             <p class="my-0">{{$t('survey')}}: {{survey.name}}</p>
+            <p class="my-0">{{$t('anonymous')}}: {{anonymous ? $t('yes') : $t('no')}}</p>
           </div>
-          <p class="subtitle-2 text-center font-weight-bold my-2">{{$t('shareCodeMsg')}}</p>
+          <!--p class="subtitle-2 text-center font-weight-bold my-2">{{$t('shareCodeMsg')}}</p>
           <div class="text-center my-2">
             <code class="display-2 black--text">{{this.surveyCode}}</code>
-          </div>
+          </div-->
 
           <v-row justify="end" class="px-4">
             <v-btn small :ripple="false" text @click="e1 = 2" class="btnNoEffect">{{$t('cancel')}}</v-btn>
@@ -284,6 +285,7 @@
           status: STATUS.ACTIVE,
           creationDate: Date.now(),
           name: this.survey.name,
+          squad: this.squadName,
           project: this.projectName,
           sprint: this.currentSprint,
           questions: this.survey.questions,
