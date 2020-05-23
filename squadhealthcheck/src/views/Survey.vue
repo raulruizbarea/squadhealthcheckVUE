@@ -1,15 +1,13 @@
 <template>
     <v-container fluid pa-0 fill-height>
       <tool-bar />
-       <v-container fluid v-if="!isSurveyActive">
+       <v-container fluid v-if="!isSurveyStatusActive()">
           <h3 class="text-center">{{ $t('surveyNotActive') }}</h3>
           <div class="text-center">  
             <v-progress-circular class="ma-10" text-center :width="10" :size="70" color="secondary" indeterminate></v-progress-circular>
           </div>
-          <!-- TODO: Delete -->
-          <v-btn small :ripple="false" @click="setSurveyActive">ACTIVATE</v-btn>
        </v-container>
-       <v-container fluid v-if="isSurveyActive">
+       <v-container fluid v-if="isSurveyStatusActive()">
           <v-stepper v-model="e1" class="elevation-0" color="secondary">
             <v-stepper-header>
               <div v-for="(question, index) in survey.questions" :key="index">
@@ -26,12 +24,7 @@
                   height="200px"
                 ></v-card>
 
-                <v-btn
-                  color="primary"
-                  @click="e1 = 2"
-                >
-                  Continue
-                </v-btn>
+                <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
 
                 <v-btn text>Cancel</v-btn>
                </v-stepper-content>
@@ -44,6 +37,8 @@
 <script>
   import ToolBar from '../components/ToolBar';
   import json from '../constants/surveys.json';
+  import { STATUS } from '@/constants/surveyStatus';
+  import db from '../firebaseInit';
 
   export default {
     components: {
@@ -51,13 +46,28 @@
     },
     data: () => ({
       e1: 1,
-      isSurveyActive: false,
+      surveyCode: null,
+      surveyStatus: STATUS.INACTIVE,
       survey: JSON.parse(JSON.stringify(json)).en[0],
     }),
     methods: {
-      setSurveyActive () {
-        this.isSurveyActive = true;
+      isSurveyActive() {
+        db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',2).get().then((querySnapshot) => {
+          if(querySnapshot.size > 0) {
+            this.surveyStatus = STATUS.ACTIVE;
+          }
+        });
+      },
+      isSurveyStatusActive() {
+        if (this.surveyStatus == STATUS.ACTIVE) {
+          return true;
+        } else {
+          return false;
+        }
       }
+    },
+    mounted() {
+      this.isSurveyActive();
     },
   }
 </script>
