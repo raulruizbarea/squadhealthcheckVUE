@@ -34,14 +34,15 @@
                   thumb-size="40"
                   hide-details
                   value="49"
+                  v-model="survey.questions[index].value"
                 >
                   <template v-slot:thumb-label="{ value }">
                     {{ satisfactionEmojis[Math.min(Math.floor(value / 10), 9)] }}
                   </template>
                 </v-slider>
 
-                <v-btn color="secondary" @click="e1++">Continue</v-btn>
-                <v-btn text @click="e1--">Cancel</v-btn>
+                <v-btn color="secondary" @click="index === survey.questions.length-1 ? finishSurvey() : e1++">{{ index===survey.questions.length-1 ? "Finish" : "Continue"}}</v-btn>
+                <v-btn v-if="index!=0" text @click="e1--">Cancel</v-btn>
                </v-stepper-content>
             </v-stepper-items>
           </v-stepper>
@@ -61,6 +62,7 @@
     },
     data: () => ({
       e1: 1,
+      surveyId: null,
       surveyCode: null,
       surveyStatus: STATUS.INACTIVE,
       survey: null,
@@ -70,6 +72,7 @@
       isSurveyActive() {
         db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',2).get().then((querySnapshot) => {
           if(querySnapshot.size > 0) {
+            this.surveyId = querySnapshot.docs[0].id;
             this.surveyStatus = STATUS.ACTIVE;
             this.survey = querySnapshot.docs.map(doc => doc.data())[0];
           }
@@ -81,6 +84,28 @@
         } else {
           return false;
         }
+      },
+      finishSurvey() {
+        var user = [];
+        user.push({username: "Anonymous", answerDate: Date.now(), answers: []});
+
+        this.survey.questions.forEach(element => {
+          user[0].answers.push({
+            area: element.area,
+            score: element.value
+          });
+        });
+
+        db.collection('surveys').doc(this.surveyId)
+        .collection('answers')
+        .add(user[0])
+        .then(docRef => {
+            console.log('Answer added: ', docRef.id);
+            this.surveyId = docRef.id;
+        })
+        .catch(error => {
+            console.error('Error updating survey: ', error);
+        });
       }
     },
     mounted() {
