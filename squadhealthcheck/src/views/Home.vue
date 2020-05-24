@@ -75,7 +75,7 @@
       enterCodeClick () {
         //console.log(this.surveyCode);
         if (this.surveyCode.length == 4 && !isNaN(this.surveyCode)) {
-          this.$router.push('survey');
+          this.$router.push('survey/' + this.surveyCode); 
         }
       },
     },

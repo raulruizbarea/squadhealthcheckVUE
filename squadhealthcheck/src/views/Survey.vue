@@ -11,22 +11,37 @@
           <v-stepper v-model="e1" class="elevation-0" color="secondary">
             <v-stepper-header>
               <div v-for="(question, index) in survey.questions" :key="index">
-                <v-stepper-step :step="index+1" color="secondary">{{question.area}}</v-stepper-step>
+                <v-stepper-step :step="index+1" color="secondary" class="pa-0">{{question.area}}</v-stepper-step>
                 <v-divider></v-divider>
               </div>
             </v-stepper-header>
 
             <v-stepper-items>
-               <v-stepper-content v-for="(question, index) in survey.questions" :key="index" :step="index">
-                <v-card
-                  class="mb-12"
-                  color="grey lighten-1"
-                  height="200px"
-                ></v-card>
+               <v-stepper-content v-for="(question, index) in survey.questions" :key="index" :step="index+1">
+                <v-card class="mb-12"
+                  color="secondary"
+                >
+                  <v-card-title class="white--text">{{question.area}}</v-card-title>
+                  <v-alert class="caption mx-2" type="success" icon="mdi-emoticon-happy-outline">{{question.exampleOfAwesome}}</v-alert>
+                  <v-alert class="caption mx-2" type="error" icon="mdi-emoticon-sad-outline">{{question.exampleOfCrappy}}</v-alert>
 
-                <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+                </v-card>
+                <v-slider
+                  color="secondary"
+                  track-color="gray"
+                  class="px-5"
+                  thumb-label="always"
+                  thumb-size="40"
+                  hide-details
+                  value="49"
+                >
+                  <template v-slot:thumb-label="{ value }">
+                    {{ satisfactionEmojis[Math.min(Math.floor(value / 10), 9)] }}
+                  </template>
+                </v-slider>
 
-                <v-btn text>Cancel</v-btn>
+                <v-btn color="secondary" @click="e1++">Continue</v-btn>
+                <v-btn text @click="e1--">Cancel</v-btn>
                </v-stepper-content>
             </v-stepper-items>
           </v-stepper>
@@ -48,13 +63,15 @@
       e1: 1,
       surveyCode: null,
       surveyStatus: STATUS.INACTIVE,
-      survey: JSON.parse(JSON.stringify(json)).en[0],
+      survey: null,
+      satisfactionEmojis: ['😭', '😢', '☹️', '🙁', '😐', '🙂', '😊', '😁', '😄', '😍'],
     }),
     methods: {
       isSurveyActive() {
         db.collection('surveys').where('code', '==', this.surveyCode).where('status','<',2).get().then((querySnapshot) => {
           if(querySnapshot.size > 0) {
             this.surveyStatus = STATUS.ACTIVE;
+            this.survey = querySnapshot.docs.map(doc => doc.data())[0];
           }
         });
       },
@@ -68,6 +85,9 @@
     },
     mounted() {
       this.isSurveyActive();
+    },
+    created() {
+      this.surveyCode = this.$route.params.id;
     },
   }
 </script>

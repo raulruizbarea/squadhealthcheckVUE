@@ -20,7 +20,7 @@ const routes = [
     meta: { hideNavigation: true }
   },
   {
-    path: '/survey',
+    path: '/survey/:id',
     name: 'Survey',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
