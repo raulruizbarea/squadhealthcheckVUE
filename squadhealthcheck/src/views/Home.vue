@@ -21,7 +21,7 @@
           ></v-text-field>
           </v-col>
             <v-col cols="2" class="text-end">
-              <v-btn block color="secondary" outlined height="100%" @click="enterCodeClick()">
+              <v-btn block color="secondary" outlined height="100%" class="pa-0" @click="enterCodeClick()">
                 <v-icon>mdi-arrow-right-thick</v-icon>
               </v-btn>
             </v-col>
@@ -48,7 +48,7 @@
               ></v-text-field>
             </v-col>
             <v-col cols="2" class="text-end">
-              <v-btn block color="secondary" outlined height="100%" @click="enterCodeClick()">
+              <v-btn block color="secondary" outlined height="100%" class="pa-0" @click="enterCodeClick()">
                 <v-icon>mdi-arrow-right-thick</v-icon>
               </v-btn>
             </v-col>
