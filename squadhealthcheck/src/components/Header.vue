@@ -1,5 +1,5 @@
 <template>
-  <v-container class="primary--text text-center shc-header" fluid>
+  <v-container class="primary--text text-center shc-header pt-0" fluid>
     <shc-lang />
     <h3>{{ $t('appName').toUpperCase() }}</h3>
     <v-col class="text--line-height-s">
@@ -16,7 +16,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 101% 290px;
+    background-size: 101% 300px;
   }
 
   .shc-slogan {
