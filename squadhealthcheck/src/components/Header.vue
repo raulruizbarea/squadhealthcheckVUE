@@ -1,28 +1,34 @@
 <template>
-  <v-container class="secondary primary--text text-center shc-header" fluid>
+  <v-container class="primary--text text-center shc-header" fluid>
     <shc-lang />
-    <h1>{{ $t('appName') }}</h1>
-    <v-col class="subtitle-1 text--line-height-s mb-12">
-      <v-rating v-model="rating" size="14" readonly dense half-increments class="pb-2"></v-rating>
-      <span v-html="$t('slogan')"></span>
+    <h3>{{ $t('appName').toUpperCase() }}</h3>
+    <v-col class="text--line-height-s">
+      <v-rating v-model="rating" size="12" readonly dense half-increments class="pb-2"></v-rating>
+      <span v-html="$t('slogan')" class="shc-slogan"></span>
+      <v-img src="../assets/logo.png" width="7rem" class="shc-img"></v-img>
     </v-col>
-    <router-link to="/"><v-img src="../assets/logo.png" width="7rem" class="shc-img"></v-img></router-link>
   </v-container>
 </template>
 
 <style scoped>
   .shc-header {
-    border-radius: 0 0 100% 100%;
+    background: url('../assets/home_background.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 101% 290px;
+  }
+
+  .shc-slogan {
+    font-size: 13px;
   }
 
   .shc-img {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 11.5rem;
-    z-index: 2;
+    margin-top: 1em;
   }
 </style>
 

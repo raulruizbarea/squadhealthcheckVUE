@@ -22,7 +22,7 @@ export const i18n = new VueI18n({
       optional: 'Optional',
       //Home
       appName: 'Squad Health Check',
-      slogan: 'Increased awareness of where<br/>the squad is at, it’s state,<br/>challenges and opportunities.',
+      slogan: 'Increased awareness of where the squad is at,<br />it’s state, challenges and opportunities.',
       helloMsg: 'Hello, nice to meet you!',
       squadMsg: 'Get moving with the Squad',
       enterCode: 'Enter code',
@@ -72,7 +72,7 @@ export const i18n = new VueI18n({
       optional: 'Opcional',
       //Home
       appName: 'Squad Health Check',
-      slogan: 'Mayor conciencia de dónde está <br/> el escuadrón, su estado, <br/> desafíos y oportunidades.',
+      slogan: 'Mayor conciencia de dónde está el escuadrón, <br />su estado, desafíos y oportunidades.',
       helloMsg: 'Hola, encantad@ de conocerte!',
       squadMsg: 'Muévete con el Escuadrón',
       enterCode: 'Introduce el código',
