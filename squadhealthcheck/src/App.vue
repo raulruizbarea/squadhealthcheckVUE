@@ -9,7 +9,7 @@
       </v-container>
     </v-content>
     <shc-footer />
-    <shc-feedback />
+    <!--shc-feedback /-->
   </v-app>
 </template>
 
