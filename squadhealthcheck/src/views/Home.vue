@@ -1,9 +1,9 @@
 <template>
   <v-container pa-0 fluid>
     <shc-header />
-    <v-col class="subtitle-1 text--line-height-s mt-12">
-      <v-subheader>{{ $t('helloMsg') }}</v-subheader>
-      <h2 class="headline font-weight-bold mb-3">{{ $t('squadMsg') }}</h2>
+    <v-col class="subtitle-1 text--line-height-s">
+      <v-subheader class="d-block text-center shc-subheader mt-1">{{ $t('helloMsg') }}</v-subheader>
+      <h4 class="font-weight-bold mb-3">{{ $t('squadMsg').toUpperCase() }}</h4>
       <v-row justify="center">
         <!-- Not Mobile -->
         <v-container class="text-center hidden-xs-only" style="max-width: 420px;" fluid>
@@ -50,6 +50,10 @@
 </template>
 
 <style scoped>
+  .shc-subheader {
+    color: var(--v-secondary-base) !important;
+  }
+
   h5 {
     text-align: center;
     border-bottom: 1px solid #000; 
