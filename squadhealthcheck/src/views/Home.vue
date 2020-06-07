@@ -13,16 +13,15 @@
             append-icon="mdi-arrow-right-circle-outline"
             @click:append="enterCodeClick"
             outlined
-            rounded
             hide-details
             v-model="surveyCode"
             maxlength="4"
             @keypress="onlyNumber"
           ></v-text-field>
-          <div>
-            <h5><span>{{ $t('or').toUpperCase() }}</span></h5>
-          </div>
-          <v-btn min-width="400" to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn>
+          
+          <h4 class="my-2">{{ $t('or').toLowerCase() }}</h4>
+
+          <v-btn min-width="400" to="/create" color="secondary" x-large elevation="10">{{ $t('create') }}</v-btn>
         </v-container>
 
         <!-- Mobile -->
@@ -31,18 +30,18 @@
             v-bind:label="$t('enterCode')"
             color="secondary"
             append-icon="mdi-arrow-right-circle-outline"
+            v-bind:placeholder="$t('digitCode')"
             @click:append="enterCodeClick"
             outlined
-            rounded
             hide-details
             v-model="surveyCode"
             maxlength="4"
             @keypress="onlyNumber"
           ></v-text-field>
-          <div>
-            <h5><span>{{ $t('or').toUpperCase() }}</span></h5>
-          </div>
-          <v-btn  block to="/create" color="secondary" x-large elevation="10" rounded>{{ $t('create') }}</v-btn>
+          
+          <h4 class="my-2">{{ $t('or').toLowerCase() }}</h4>
+
+          <v-btn  block to="/create" color="secondary" x-large elevation="10">{{ $t('create') }}</v-btn>
         </v-container>
       </v-row>
     </v-col>
@@ -52,18 +51,6 @@
 <style scoped>
   .shc-subheader {
     color: var(--v-secondary-base) !important;
-  }
-
-  h5 {
-    text-align: center;
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 1em 30% 1em 30%;
-  } 
-
-  h5 span { 
-    background:#fff; 
-    padding:0 10px; 
   }
 </style>
 

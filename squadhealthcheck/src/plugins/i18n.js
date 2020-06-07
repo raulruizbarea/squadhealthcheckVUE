@@ -27,6 +27,7 @@ export const i18n = new VueI18n({
       squadMsg: 'Get moving with the Squad',
       enterCode: 'Enter code',
       create: 'Create',
+      digitCode: '4 digit code here...',
       //Survey
       survey: 'Survey',
       surveyView: 'Survey view',
@@ -77,6 +78,7 @@ export const i18n = new VueI18n({
       squadMsg: 'Muévete con el Escuadrón',
       enterCode: 'Introduce el código',
       create: 'Crear',
+      digitCode: 'Código de 4 digitos aquí...',
       //Survey
       survey: 'Encuesta',
       surveyView: 'Vista de encuesta',
