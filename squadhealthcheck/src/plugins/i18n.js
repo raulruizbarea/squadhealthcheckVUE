@@ -53,7 +53,7 @@ export const i18n = new VueI18n({
       template: 'Template',
       basedOn: 'Based on',
       //Footer
-      terms: 'By using this application, you agree to our<br /><strong>Terms of Service</strong> and <strong>Privacy Policy</strong>',
+      terms: 'By using this application, you agree to our<br /><strong><span style="color: #FFA200">Terms of Service</span></strong> and <strong><span style="color: #FFA200">Privacy Policy</span></strong>',
       //Feedback
       feedbackMsg1: 'We want to hear from you',
       feedbackMsg2: 'Thank you for taking the time to provide us with your feedback!',
@@ -103,7 +103,7 @@ export const i18n = new VueI18n({
       template: 'Plantilla',
       basedOn: 'Basada en',
       //Footer
-      terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong> Términos de servicio </strong> y <strong> Política de privacidad </strong>',
+      terms: 'Al usar esta aplicación, acepta nuestros <br /> <strong><span style="color: #FFA200">Términos de servicio</span></strong> y <strong><span style="color: #FFA200">Política de privacidad</span></strong>',
       //Feedback
       feedbackMsg1: 'Queremos saber de ti',
       feedbackMsg2: '¡Gracias por tomarse el tiempo de enviarnos sus comentarios!',
