@@ -6,42 +6,57 @@
       <h4 class="font-weight-bold mb-3">{{ $t('squadMsg').toUpperCase() }}</h4>
       <v-row justify="center">
         <!-- Not Mobile -->
-        <v-container class="text-center hidden-xs-only" style="max-width: 420px;" fluid>
+        <v-container class="text-center hidden-xs-only" style="max-width: 425px;" fluid>
+          <v-row no-gutters>
+            <v-col cols="10" class="pr-4">
           <v-text-field
             v-bind:label="$t('enterCode')"
             color="secondary"
-            append-icon="mdi-arrow-right-circle-outline"
-            @click:append="enterCodeClick"
+            v-bind:placeholder="$t('digitCode')"
             outlined
             hide-details
             v-model="surveyCode"
             maxlength="4"
             @keypress="onlyNumber"
           ></v-text-field>
+          </v-col>
+            <v-col cols="2" class="text-end">
+              <v-btn block color="secondary" outlined height="100%" @click="enterCodeClick()">
+                <v-icon>mdi-arrow-right-thick</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
           
           <h4 class="my-2">{{ $t('or').toLowerCase() }}</h4>
 
-          <v-btn min-width="400" to="/create" color="secondary" x-large elevation="10">{{ $t('create') }}</v-btn>
+          <v-btn min-width="400" to="/create" color="secondary" x-large elevation="10" class="text-transform-none">{{ $t('create') }}</v-btn>
         </v-container>
 
         <!-- Mobile -->
         <v-container class="text-center hidden-sm-and-up" fluid>
-          <v-text-field
-            v-bind:label="$t('enterCode')"
-            color="secondary"
-            append-icon="mdi-arrow-right-circle-outline"
-            v-bind:placeholder="$t('digitCode')"
-            @click:append="enterCodeClick"
-            outlined
-            hide-details
-            v-model="surveyCode"
-            maxlength="4"
-            @keypress="onlyNumber"
-          ></v-text-field>
-          
+          <v-row no-gutters>
+            <v-col cols="10" class="pr-4">
+              <v-text-field
+                v-bind:label="$t('enterCode')"
+                color="secondary"
+                v-bind:placeholder="$t('digitCode')"
+                outlined
+                hide-details
+                v-model="surveyCode"
+                maxlength="4"
+                @keypress="onlyNumber"
+              ></v-text-field>
+            </v-col>
+            <v-col cols="2" class="text-end">
+              <v-btn block color="secondary" outlined height="100%" @click="enterCodeClick()">
+                <v-icon>mdi-arrow-right-thick</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+                  
           <h4 class="my-2">{{ $t('or').toLowerCase() }}</h4>
 
-          <v-btn  block to="/create" color="secondary" x-large elevation="10">{{ $t('create') }}</v-btn>
+          <v-btn  block to="/create" color="secondary" x-large elevation="10" class="text-transform-none">{{ $t('create') }}</v-btn>
         </v-container>
       </v-row>
     </v-col>
