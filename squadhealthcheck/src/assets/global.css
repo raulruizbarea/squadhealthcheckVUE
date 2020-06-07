@@ -11,6 +11,10 @@
   line-height: 1.5rem !important;
 }
 
+.text-transform-none {
+  text-transform: none !important;
+}
+
 /* Icons hover */
 .v-icon:hover {
   color: var(--v-secondary-base);
